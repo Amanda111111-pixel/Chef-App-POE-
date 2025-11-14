@@ -60,6 +60,12 @@ Regular users can no longer add or modify items
 Only admin can log in to modify the menu
 Admin can now remove or edit items directly in the Change screen
 
+_________
+# Pictures and video of app
+
+![alt text](<Screenshot 2025-11-14 195251.png>) ![alt text](<Screenshot 2025-11-14 195315.png>) ![alt text](<Screenshot 2025-11-14 195346.png>) ![alt text](<Screenshot 2025-11-14 195623.png>) ![alt text](<Screenshot 2025-11-14 195642.png>) ![alt text](<Screenshot 2025-11-14 195709.png>) ![alt text](<Screenshot 2025-11-14 195724.png>) ![alt text](<Screenshot 2025-11-14 195739.png>) ![alt text](<Screenshot 2025-11-14 195825.png>) ![alt text](<Screenshot 2025-11-14 195843.png>)
+
+<video controls src="assets/chef app recording.mp4" title="Title"></video>
 
 _________
 # Author

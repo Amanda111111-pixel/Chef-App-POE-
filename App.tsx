@@ -947,19 +947,17 @@ function DealManagementScreen({
   );
 }
 
-// FIXED Deals Screen - Now with proper scrolling
+// FIXED Deals Screen - No filter, shows ALL active deals
 function DealsScreen({ 
   menuItems, 
   dealItems, 
-  filter, 
   onBack 
 }: { 
   menuItems: MenuItem[]; 
   dealItems: DealItem[];
-  filter: Course | 'All'; 
   onBack: () => void; 
 }) {
-  // Get active deals and match them with menu items
+  // Get active deals and match them with menu items - NO FILTERING
   const activeDeals = dealItems
     .filter(deal => deal.isActive)
     .map(deal => {
@@ -967,11 +965,6 @@ function DealsScreen({
       return menuItem ? { ...menuItem, deal } : null;
     })
     .filter(Boolean) as (MenuItem & { deal: DealItem })[];
-
-  // Apply filter
-  const filtered = filter === 'All' 
-    ? activeDeals 
-    : activeDeals.filter(item => item.course === filter);
 
   const hasDiscounts = activeDeals.some(item => item.deal.newPrice < item.deal.previousPrice);
 
@@ -1050,7 +1043,7 @@ function DealsScreen({
     </View>
   );
 
-  // Render header with sale banner
+  // Render header with sale banner - NO FILTER BUTTONS
   const renderHeader = () => (
     <>
       {hasDiscounts && (
@@ -1068,6 +1061,13 @@ function DealsScreen({
           </Text>
         </View>
       )}
+      
+      {/* Show deal count */}
+      <View style={{ paddingHorizontal: 16, marginBottom: 12 }}>
+        <Text style={{ fontSize: 14, color: '#8d6e63', fontWeight: '600', textAlign: 'center' }}>
+          Showing {activeDeals.length} special deals
+        </Text>
+      </View>
     </>
   );
 
@@ -1075,13 +1075,10 @@ function DealsScreen({
   const renderEmptyState = () => (
     <View style={styles.emptyState}>
       <Text style={styles.emptyStateText}>
-        {activeDeals.length === 0 ? 'No deals available' : 'No deals found for this filter'}
+        No deals available
       </Text>
       <Text style={styles.emptyStateSubtext}>
-        {activeDeals.length === 0 
-          ? 'Check back later for special offers!' 
-          : 'Try selecting a different filter'
-        }
+        Check back later for special offers!
       </Text>
     </View>
   );
@@ -1089,10 +1086,10 @@ function DealsScreen({
   return (
     <View style={styles.screen}>
       <Text style={styles.screenHeader}>
-        Special Deals{filter !== 'All' ? ` — ${filter}` : ''}
+        Special Deals
       </Text>
 
-      {filtered.length === 0 ? (
+      {activeDeals.length === 0 ? (
         <ScrollView style={{ flex: 1 }} contentContainerStyle={{ paddingBottom: 100 }}>
           {renderHeader()}
           {renderEmptyState()}
@@ -1100,14 +1097,14 @@ function DealsScreen({
       ) : (
         <View style={{ flex: 1 }}>
           <FlatList
-            data={filtered}
+            data={activeDeals} // Use activeDeals directly, no filtering
             keyExtractor={item => item.id}
             renderItem={renderDealItem}
             ListHeaderComponent={renderHeader}
             numColumns={2}
             columnWrapperStyle={{ justifyContent: 'space-between', paddingHorizontal: 12 }}
             contentContainerStyle={{ 
-              paddingBottom: 100, // Extra padding at bottom to ensure content is visible above the back button
+              paddingBottom: 100,
               flexGrow: 1 
             }}
             showsVerticalScrollIndicator={false}
@@ -1997,7 +1994,7 @@ export default function App() {
     { id: uuidv4(), name: 'Fresh Lemonade', description: 'Sparkling homemade lemonade with mint leaves.', course: 'Drink', price: 30, image: 'https://i.pinimg.com/736x/75/8e/8f/758e8fcb501b48b5db38c6fb83f8c46d.jpg' },
   ]);
 
-  // NEW: Deal items state - Start with empty array (no sample deals)
+  // Deal items state - Start with empty array (no sample deals)
   const [dealItems, setDealItems] = useState<DealItem[]>([]);
 
   const [personalMenuItems, setPersonalMenuItems] = useState<MenuItem[]>([]);
@@ -2086,7 +2083,7 @@ export default function App() {
     setScreen('Home');
   };
 
-  // NEW: Update deals function
+  // FIXED: Update deals function - now properly updates the state
   const updateDeals = (newDeals: DealItem[]) => {
     setDealItems(newDeals);
   };
@@ -2152,7 +2149,6 @@ export default function App() {
         <DealsScreen 
           menuItems={menuItems} 
           dealItems={dealItems}
-          filter={selectedCourseFilter} 
           onBack={() => setScreen('Home')} 
         />
       )}
@@ -2278,14 +2274,3 @@ export default function App() {
     </SafeAreaView>
   );
 }
-//https://www.reactnative.express/
-
-//https://reactnative.dev/docs/tutorial/
-
-//https://reactnative.dev/docs/components-and-apis/
-
-//https://callstack.github.io/react-native-paper//
-
-//https://react-native-elements.js.org/#/image/
-
-//https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/basic_type_example/
