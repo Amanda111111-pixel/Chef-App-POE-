@@ -1,63 +1,37 @@
-🍽️ Chef’s App
+ Chef’s Special
 
-Chef’s App is a React Native restaurant management and browsing app that allows users to explore a digital food menu, view deals, search items, and (for admin users) manage menu items.
-This project demonstrates state management, navigation, and user access control in React Native.
+Chef’s Special is an app that lets users explore a digital menu, view deals, search items, and (for admin users) manage menu items.
 ______________
 
 # Project Purpose & Summary
 
-This app was developed as part of a mobile application development project to showcase practical skills in building a functional, user-friendly React Native application.
-The goal was to simulate a restaurant menu system that allows:
+This app was made as part of a mobile application development project to help manage the client's business and allow for:
 
-Regular users to browse dishes, view specials, and manage a personal selection of items.
-
-Administrators to manage the menu content by adding, editing, or removing dishes.
-
-Through this project, key learning outcomes include:
-
-Implementing component-based architecture
-
-Using React Hooks for state management
-
-Designing intuitive user interfaces
-
-Controlling access using user authentication logic
-
-Structuring multi-screen navigation using React Navigation
-
-_________
+Regular users to browse dishes, view specials, and manage a personal menu.
+Admin to manage the menu content by adding, editing, or removing dishes.
+__________________
 # Features
 
 -> User Features
 
 View categorized menus (Starters, Mains, Desserts, Drinks)
-
 Search for menu items by name or description
-
 Filter by course type
-
 Add favorite items to a Personal Menu
-
 View special Deals
-
 Make simulated payments
-
 Contact section for inquiries
 
 -> Admin Features
 
 Secure Admin login system
-
 Add, remove, and edit menu items
-
 Access restricted to authorized admin only
-
 Admin can manage menu via the Change screen
-
 Admin-only floating “+ Add” button for quick item additions
-
 _____
 # Navigation Overview
+
 Screen	Description
 Login	Users log in as regular or admin users
 Home	Displays menu items, statistics, and filters
@@ -76,60 +50,32 @@ To access admin-only features:
 Email: jabarileeds@gmail.com  
 Password: kor
 
-🛠️ Tech Stack
-
-Framework: React Native (Expo)
-
-Language: TypeScript
-
-UI Components: React Native core components (SafeAreaView, FlatList, Image, ScrollView)
-
-Platform: Android & iOS compatible
-
-_________
-# Setup Instructions
-
-1. Clone the Repository
-git clone https://github.com/yourusername/ChefsApp.git
-cd ChefsApp
-
-2. Install Dependencies
-npm install
-
-3. Run the App
-npx expo start
-
 __________
 # Changelog (Part 2 Updates)
-Update	Description
-🖼️ Added Pictures	Each menu item now includes a high-quality image
-🔍 Filter System	Added filters by course (Starter, Main, Dessert, Drink)
-🎨 Aesthetic Update	Improved spacing, colors, and layout consistency
-🚫 User Permissions	Regular users can no longer add or modify items
-🔐 Admin Login	Only admin can log in to modify the menu
-✏️ Edit Button (Admin)	Admin can now remove or edit items directly in the Change screen
-📸 Preview
 
-(Insert screenshots of your app here, e.g., Login screen, Menu screen, Deals screen)
+Each menu item now has an image
+Added filters that filters by course (Starter, Main, Dessert, Drink)
+Updated aesthetic
+Regular users can no longer add or modify items
+Only admin can log in to modify the menu
+Admin can now remove or edit items directly in the Change screen
 
-/assets/screenshots/login.png
-/assets/screenshots/menu.png
-/assets/screenshots/deals.png
 
-💡 Future Improvements
-
-Implement backend integration for persistent storage
-
-Add real payment gateway
-
-Expand filtering and sorting options
-
-Introduce user authentication via Firebase
-
-👩‍🎓 Author
+_________
+# Author
 
 Amanda Cele / Jabari Leeds
-📧 Email: jabarileeds@gmail.com
+Email: jabarileeds@gmail.com
 
-🧑‍🍳 Project: Chef’s App (React Native)
-📅 Date: November 2025
+Project: Chef’s App (React Native)
+Date: November 2025
+
+___________
+# Reference List 
+
+Callstack. 2025. React Native Paper Documentation. Viewed 14 November 2025, from https://callstack.github.io/react-native-paper/
+React Native. 2025a. React Native Tutorial. Viewed 14 November 2025, from https://reactnative.dev/docs/tutorial
+React Native. 2025b. Components and APIs. Viewed 14 November 2025, from https://reactnative.dev/docs/components-and-apis
+React Native Elements. 2025. Image Component Documentation. Viewed 14 November 2025, from https://react-native-elements.js.org/#/image
+React Native Express. 2025. React Native Express. Viewed 14 November 2025, from https://www.reactnative.express/
+React TypeScript Cheatsheets. 2025. Basic Type Example. Viewed 14 November 2025, from https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/basic_type_example

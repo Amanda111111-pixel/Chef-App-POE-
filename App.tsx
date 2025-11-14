@@ -669,7 +669,7 @@ function MenuManagementTab({
   );
 }
 
-// REVISED Deals Management Tab - Now with proper scrolling like menu management
+// FIXED Deals Management Tab - Now with proper state synchronization
 function DealsManagementTab({
   menuItems,
   dealItems,
@@ -680,6 +680,11 @@ function DealsManagementTab({
   onUpdateDeals: (deals: DealItem[]) => void;
 }) {
   const [selectedItems, setSelectedItems] = useState<DealItem[]>(dealItems);
+
+  // Sync local state with prop changes
+  React.useEffect(() => {
+    setSelectedItems(dealItems);
+  }, [dealItems]);
 
   const toggleItemSelection = (menuItem: MenuItem) => {
     setSelectedItems(prev => {
@@ -1464,7 +1469,7 @@ function LoginScreen({
         </TouchableOpacity>
 
         <TouchableOpacity style={[styles.ghostButton, { marginTop: 12 }]} onPress={onSignup}>
-          <Text style={styles.ghostButtonText}>Sign up (demo)</Text>
+          <Text style={styles.ghostButtonText}>Sign up</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -1992,37 +1997,8 @@ export default function App() {
     { id: uuidv4(), name: 'Fresh Lemonade', description: 'Sparkling homemade lemonade with mint leaves.', course: 'Drink', price: 30, image: 'https://i.pinimg.com/736x/75/8e/8f/758e8fcb501b48b5db38c6fb83f8c46d.jpg' },
   ]);
 
-  // NEW: Deal items state - Initialize with some sample deals
-  const [dealItems, setDealItems] = useState<DealItem[]>([
-    {
-      id: uuidv4(),
-      menuItemId: menuItems[0].id, // Tomato Bruschetta
-      previousPrice: 45,
-      newPrice: 35,
-      isActive: true,
-    },
-    {
-      id: uuidv4(),
-      menuItemId: menuItems[3].id, // Creamy Mushroom Pasta
-      previousPrice: 85,
-      newPrice: 65,
-      isActive: true,
-    },
-    {
-      id: uuidv4(),
-      menuItemId: menuItems[8].id, // Chocolate Mousse
-      previousPrice: 40,
-      newPrice: 30,
-      isActive: true,
-    },
-    {
-      id: uuidv4(),
-      menuItemId: menuItems[11].id, // Berry Smoothie
-      previousPrice: 45,
-      newPrice: 35,
-      isActive: true,
-    },
-  ]);
+  // NEW: Deal items state - Start with empty array (no sample deals)
+  const [dealItems, setDealItems] = useState<DealItem[]>([]);
 
   const [personalMenuItems, setPersonalMenuItems] = useState<MenuItem[]>([]);
   const [editingItem, setEditingItem] = useState<MenuItem | null>(null);
@@ -2051,8 +2027,37 @@ export default function App() {
     if (!userEmail) return Alert.alert('Please enter email');
     if (userEmail.toLowerCase() === ADMIN_EMAIL && userPassword === ADMIN_PASSWORD) {
       setIsAdmin(true);
+      Alert.alert('Welcome Admin!', 'You have logged in as administrator.');
     } else {
       setIsAdmin(false);
+      Alert.alert('Welcome!', 'You have successfully logged in.');
+    }
+    setScreen('Home');
+  };
+
+  const signup = () => {
+    if (!userEmail || !userPassword) {
+      Alert.alert('Missing Information', 'Please enter both email and password to sign up.');
+      return;
+    }
+
+    if (!userEmail.includes('@')) {
+      Alert.alert('Invalid Email', 'Please enter a valid email address.');
+      return;
+    }
+
+    if (userPassword.length < 3) {
+      Alert.alert('Weak Password', 'Please enter a password with at least 3 characters.');
+      return;
+    }
+
+    // For demo purposes, any non-admin email/password will work
+    if (userEmail.toLowerCase() === ADMIN_EMAIL && userPassword === ADMIN_PASSWORD) {
+      setIsAdmin(true);
+      Alert.alert('Welcome Admin!', 'You have signed up as administrator.');
+    } else {
+      setIsAdmin(false);
+      Alert.alert('Success!', `Welcome ${username || 'User'}! Your account has been created.`);
     }
     setScreen('Home');
   };
@@ -2106,7 +2111,7 @@ export default function App() {
           username={username}
           setUsername={setUsername}
           onLogin={login}
-          onSignup={() => Alert.alert('Sign up', 'Sign-up would be implemented here (demo).')}
+          onSignup={signup}
         />
       )}
 
@@ -2273,3 +2278,14 @@ export default function App() {
     </SafeAreaView>
   );
 }
+//https://www.reactnative.express/
+
+//https://reactnative.dev/docs/tutorial/
+
+//https://reactnative.dev/docs/components-and-apis/
+
+//https://callstack.github.io/react-native-paper//
+
+//https://react-native-elements.js.org/#/image/
+
+//https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/basic_type_example/
