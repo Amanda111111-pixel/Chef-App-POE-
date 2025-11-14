@@ -25,30 +25,30 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     padding: 12,
     margin: 6,
-    borderRadius: 12,
+    borderRadius: 16,
     borderWidth: 1,
     borderColor: '#e8d5c4',
     shadowColor: '#5d4037',
     shadowOffset: {
       width: 0,
-      height: 2,
+      height: 4,
     },
-    shadowOpacity: 0.1,
-    shadowRadius: 6,
-    elevation: 4,
+    shadowOpacity: 0.12,
+    shadowRadius: 8,
+    elevation: 6,
   },
   image: {
     width: '100%', 
     height: 130, 
-    borderRadius: 10, 
+    borderRadius: 12, 
     marginBottom: 10,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
-      height: 1,
+      height: 2,
     },
     shadowOpacity: 0.2,
-    shadowRadius: 3,
+    shadowRadius: 4,
   },
   dealCard: {
     alignItems: 'center', 
@@ -57,19 +57,19 @@ const styles = StyleSheet.create({
   dealImage: { 
     width: 120, 
     height: 120, 
-    borderRadius: 12, 
+    borderRadius: 16, 
     marginBottom: 8,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
-      height: 2,
+      height: 3,
     },
     shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5,
+    shadowRadius: 6,
+    elevation: 6,
   },
   itemName: {
-    fontWeight: '700', 
+    fontWeight: '800', 
     fontSize: 16,
     color: '#4e342e',
     marginBottom: 4,
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
   },
   itemPrice: {
     marginTop: 4, 
-    fontWeight: '700',
+    fontWeight: '800',
     fontSize: 15,
     color: '#d7ccc8',
   },
@@ -92,47 +92,49 @@ const styles = StyleSheet.create({
     backgroundColor: '#fefaf5',
   },
   screenHeader: {
-    fontSize: 24,
+    fontSize: 26,
     fontWeight: '800',
-    paddingHorizontal: 16,
-    paddingVertical: 12,
+    paddingHorizontal: 20,
+    paddingVertical: 16,
     color: '#5d4037',
     backgroundColor: '#fff',
     shadowColor: '#5d4037',
     shadowOffset: {
       width: 0,
-      height: 1,
+      height: 2,
     },
-    shadowOpacity: 0.1,
-    shadowRadius: 3,
-    elevation: 3,
+    shadowOpacity: 0.08,
+    shadowRadius: 6,
+    elevation: 4,
     marginBottom: 8,
+    borderBottomWidth: 2,
+    borderBottomColor: '#f5efe8',
   },
   formCard: {
     backgroundColor: '#fff',
-    padding: 16,
+    padding: 20,
     margin: 16,
-    borderRadius: 12,
+    borderRadius: 16,
     borderWidth: 1,
     borderColor: '#e8d5c4',
     shadowColor: '#5d4037',
     shadowOffset: {
       width: 0,
-      height: 3,
+      height: 4,
     },
-    shadowOpacity: 0.15,
-    shadowRadius: 8,
-    elevation: 6,
+    shadowOpacity: 0.12,
+    shadowRadius: 12,
+    elevation: 8,
   },
   input: {
-    borderWidth: 1.5,
-    borderColor: '#d7ccc8',
-    paddingHorizontal: 14,
-    paddingVertical: 10,
-    borderRadius: 8,
+    borderWidth: 2,
+    borderColor: '#e8d5c4',
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    borderRadius: 12,
     marginTop: 8,
-    backgroundColor: '#faf4ed',
-    fontSize: 15,
+    backgroundColor: '#faf7f2',
+    fontSize: 16,
     color: '#5d4037',
     shadowColor: '#000',
     shadowOffset: {
@@ -140,22 +142,22 @@ const styles = StyleSheet.create({
       height: 1,
     },
     shadowOpacity: 0.05,
-    shadowRadius: 2,
+    shadowRadius: 3,
   },
   primaryButton: {
     backgroundColor: '#6d4c41',
-    padding: 14,
-    borderRadius: 8,
+    padding: 16,
+    borderRadius: 12,
     alignItems: 'center',
     marginTop: 16,
     shadowColor: '#4e342e',
     shadowOffset: {
       width: 0,
-      height: 3,
+      height: 4,
     },
     shadowOpacity: 0.3,
-    shadowRadius: 6,
-    elevation: 6,
+    shadowRadius: 8,
+    elevation: 8,
   },
   primaryButtonText: {
     color: '#fff',
@@ -164,13 +166,20 @@ const styles = StyleSheet.create({
     letterSpacing: 0.5,
   },
   ghostButton: {
-    padding: 14,
-    borderRadius: 8,
+    padding: 16,
+    borderRadius: 12,
     alignItems: 'center',
     marginTop: 8,
-    borderWidth: 1.5,
+    borderWidth: 2,
     borderColor: '#a1887f',
     backgroundColor: '#fff',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.1,
+    shadowRadius: 2,
   },
   ghostButtonText: {
     color: '#5d4037',
@@ -182,7 +191,7 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
-    borderTopWidth: 1,
+    borderTopWidth: 2,
     borderColor: '#e8d5c4',
     backgroundColor: '#fff',
     flexDirection: 'row',
@@ -191,30 +200,34 @@ const styles = StyleSheet.create({
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
-      height: -2,
+      height: -4,
     },
-    shadowOpacity: 0.1,
-    shadowRadius: 8,
-    elevation: 10,
+    shadowOpacity: 0.15,
+    shadowRadius: 12,
+    elevation: 12,
   },
   navButton: {
-    paddingHorizontal: 12,
-    paddingVertical: 6,
+    paddingHorizontal: 16,
+    paddingVertical: 8,
     alignItems: 'center',
+    borderRadius: 8,
   },
   navButtonText: {
     fontSize: 11,
     color: '#8d6e63',
     fontWeight: '600',
-    marginTop: 2,
+    marginTop: 4,
   },
-  fab: {
+  fabContainer: {
     position: 'absolute',
     right: 20,
     bottom: 80,
+    alignItems: 'flex-end',
+  },
+  fab: {
     backgroundColor: '#8d6e63',
-    paddingHorizontal: 18,
-    paddingVertical: 14,
+    paddingHorizontal: 20,
+    paddingVertical: 16,
     borderRadius: 28,
     shadowColor: '#4e342e',
     shadowOffset: {
@@ -224,29 +237,39 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.4,
     shadowRadius: 8,
     elevation: 8,
+    marginBottom: 12,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  fabText: {
+    color: '#fff',
+    fontWeight: '700',
+    fontSize: 14,
+    marginLeft: 6,
   },
   infoRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingHorizontal: 16,
-    marginBottom: 16,
+    marginBottom: 20,
   },
   infoCard: {
     flex: 1,
     backgroundColor: '#fff',
     padding: 16,
     marginHorizontal: 6,
-    borderRadius: 12,
+    borderRadius: 16,
     borderWidth: 1,
     borderColor: '#e8d5c4',
     shadowColor: '#5d4037',
     shadowOffset: {
       width: 0,
-      height: 2,
+      height: 3,
     },
     shadowOpacity: 0.1,
-    shadowRadius: 6,
-    elevation: 4,
+    shadowRadius: 8,
+    elevation: 6,
+    alignItems: 'center',
   },
   infoTitle: {
     fontSize: 12,
@@ -255,15 +278,15 @@ const styles = StyleSheet.create({
     letterSpacing: 0.5,
   },
   infoValue: {
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: '800',
-    marginTop: 6,
+    marginTop: 8,
     color: '#5d4037',
   },
   filterBtn: {
-    paddingHorizontal: 14,
-    paddingVertical: 8,
-    borderWidth: 1.5,
+    paddingHorizontal: 16,
+    paddingVertical: 10,
+    borderWidth: 2,
     borderColor: '#d7ccc8',
     borderRadius: 20,
     marginRight: 8,
@@ -277,33 +300,41 @@ const styles = StyleSheet.create({
     shadowRadius: 2,
   },
   filterBtnActive: {
-    backgroundColor: '#efebe9',
-    borderColor: '#8d6e63',
+    backgroundColor: '#6d4c41',
+    borderColor: '#5d4037',
+  },
+  filterBtnText: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#8d6e63',
+  },
+  filterBtnTextActive: {
+    color: '#fff',
   },
   avgRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingVertical: 10,
+    paddingVertical: 12,
     borderBottomWidth: 1,
     borderColor: '#f5f5f5',
   },
   menuImage: {
     width: '100%',
     height: 110,
-    borderRadius: 8,
+    borderRadius: 12,
     marginBottom: 10,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
-      height: 2,
+      height: 3,
     },
     shadowOpacity: 0.2,
-    shadowRadius: 4,
+    shadowRadius: 5,
   },
   secondaryButton: {
-    padding: 10,
-    borderRadius: 6,
-    borderWidth: 1.5,
+    padding: 12,
+    borderRadius: 8,
+    borderWidth: 2,
     borderColor: '#d7ccc8',
     alignItems: 'center',
     marginVertical: 6,
@@ -317,38 +348,38 @@ const styles = StyleSheet.create({
     shadowRadius: 2,
   },
   listItem: {
-    padding: 14,
+    padding: 16,
     borderBottomWidth: 1,
     borderColor: '#f1f1f1',
     backgroundColor: '#fff',
     marginHorizontal: 8,
-    marginVertical: 2,
-    borderRadius: 8,
+    marginVertical: 4,
+    borderRadius: 12,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
       height: 1,
     },
-    shadowOpacity: 0.05,
-    shadowRadius: 2,
+    shadowOpacity: 0.06,
+    shadowRadius: 3,
   },
   menuRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    padding: 14,
+    padding: 16,
     borderBottomWidth: 1,
     borderColor: '#f5f5f5',
     backgroundColor: '#fff',
-    marginBottom: 6,
-    borderRadius: 10,
+    marginBottom: 8,
+    borderRadius: 12,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
-      height: 1,
+      height: 2,
     },
     shadowOpacity: 0.08,
-    shadowRadius: 3,
-    elevation: 2,
+    shadowRadius: 4,
+    elevation: 3,
   },
   cardContent: {
     flex: 1,
@@ -363,22 +394,32 @@ const styles = StyleSheet.create({
   filterRow: {
     flexDirection: 'row',
     paddingHorizontal: 16,
-    marginBottom: 16,
+    marginBottom: 20,
   },
   tabContainer: {
     flexDirection: 'row',
     paddingHorizontal: 16,
-    marginBottom: 16,
+    marginBottom: 20,
+    backgroundColor: '#fff',
+    borderRadius: 12,
+    padding: 4,
+    shadowColor: '#5d4037',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.08,
+    shadowRadius: 4,
+    elevation: 3,
   },
   tabButton: {
     flex: 1,
     paddingVertical: 12,
     alignItems: 'center',
-    borderBottomWidth: 3,
-    borderBottomColor: 'transparent',
+    borderRadius: 8,
   },
   tabButtonActive: {
-    borderBottomColor: '#6d4c41',
+    backgroundColor: '#6d4c41',
   },
   tabButtonText: {
     fontSize: 14,
@@ -386,7 +427,56 @@ const styles = StyleSheet.create({
     color: '#8d6e63',
   },
   tabButtonTextActive: {
-    color: '#5d4037',
+    color: '#fff',
+  },
+  saleBadge: {
+    position: 'absolute',
+    top: 8,
+    right: 8,
+    backgroundColor: '#ff6b6b',
+    paddingHorizontal: 10,
+    paddingVertical: 6,
+    borderRadius: 12,
+    zIndex: 1,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: 4,
+  },
+  saleBadgeText: {
+    color: 'white',
+    fontSize: 10,
+    fontWeight: '800',
+  },
+  emptyState: {
+    padding: 40,
+    alignItems: 'center',
+    backgroundColor: '#fff',
+    margin: 20,
+    borderRadius: 16,
+    shadowColor: '#5d4037',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.08,
+    shadowRadius: 8,
+  },
+  emptyStateText: {
+    fontSize: 16,
+    color: '#8d6e63',
+    textAlign: 'center',
+    marginBottom: 8,
+    fontWeight: '600',
+  },
+  emptyStateSubtext: {
+    fontSize: 14,
+    color: '#a1887f',
+    textAlign: 'center',
+    lineHeight: 20,
   },
 });
 
@@ -497,7 +587,7 @@ function ManageScreen({
         />
       )}
 
-      <TouchableOpacity style={[styles.ghostButton, { margin: 12 }]} onPress={onBack}>
+      <TouchableOpacity style={[styles.ghostButton, { margin: 16 }]} onPress={onBack}>
         <Text style={styles.ghostButtonText}>Back to Home</Text>
       </TouchableOpacity>
     </View>
@@ -518,7 +608,7 @@ function MenuManagementTab({
 }) {
   return (
     <View style={{ flex: 1 }}>
-      <View style={{ paddingHorizontal: 16, marginBottom: 12 }}>
+      <View style={{ paddingHorizontal: 16, marginBottom: 16 }}>
         <TouchableOpacity 
           style={styles.primaryButton}
           onPress={() => onOpenScreen('AddMenu')}
@@ -527,32 +617,32 @@ function MenuManagementTab({
         </TouchableOpacity>
       </View>
 
-      <ScrollView style={{ flex: 1 }}>
+      <ScrollView style={{ flex: 1 }} contentContainerStyle={{ paddingBottom: 20 }}>
         {menuItems.map(item => (
           <View key={item.id} style={styles.menuRow}>
             <View style={{ flexDirection: 'row', alignItems: 'center', flex: 1 }}>
               <Image 
                 source={{ uri: item.image }} 
-                style={{ width: 60, height: 60, borderRadius: 6, marginRight: 12 }} 
+                style={{ width: 70, height: 70, borderRadius: 8, marginRight: 16 }} 
               />
               <View style={{ flex: 1 }}>
-                <Text style={{ fontWeight: '700', fontSize: 16 }}>{item.name}</Text>
-                <Text style={{ color: '#8d6e63', fontSize: 12 }}>{item.course}</Text>
-                <Text style={{ color: '#5d4037', fontWeight: '600' }}>${item.price}</Text>
-                <Text style={{ color: '#666', fontSize: 11, marginTop: 2 }} numberOfLines={2}>
+                <Text style={{ fontWeight: '700', fontSize: 16, color: '#5d4037' }}>{item.name}</Text>
+                <Text style={{ color: '#8d6e63', fontSize: 13, fontWeight: '600' }}>{item.course}</Text>
+                <Text style={{ color: '#5d4037', fontWeight: '700', fontSize: 16 }}>${item.price}</Text>
+                <Text style={{ color: '#8d6e63', fontSize: 12, marginTop: 4 }} numberOfLines={2}>
                   {item.description}
                 </Text>
               </View>
             </View>
             <View style={{ flexDirection: 'row', alignItems: 'center' }}>
               <TouchableOpacity 
-                style={[styles.secondaryButton, { marginRight: 8, paddingHorizontal: 8 }]} 
+                style={[styles.secondaryButton, { marginRight: 8, paddingHorizontal: 12 }]} 
                 onPress={() => onEditItem(item)}
               >
                 <Text style={{ color: '#2a9d8f', fontWeight: '700', fontSize: 12 }}>Edit</Text>
               </TouchableOpacity>
               <TouchableOpacity 
-                style={[styles.secondaryButton, { paddingHorizontal: 8 }]} 
+                style={[styles.secondaryButton, { paddingHorizontal: 12 }]} 
                 onPress={() => onRemoveItem(item.id)}
               >
                 <Text style={{ color: '#e76f51', fontWeight: '700', fontSize: 12 }}>Remove</Text>
@@ -562,12 +652,12 @@ function MenuManagementTab({
         ))}
         
         {menuItems.length === 0 && (
-          <View style={{ padding: 40, alignItems: 'center' }}>
-            <Text style={{ color: '#8d6e63', textAlign: 'center', marginBottom: 16 }}>
+          <View style={styles.emptyState}>
+            <Text style={styles.emptyStateText}>
               No menu items yet.{'\n'}Add your first menu item to get started!
             </Text>
             <TouchableOpacity 
-              style={styles.primaryButton}
+              style={[styles.primaryButton, { marginTop: 16 }]}
               onPress={() => onOpenScreen('AddMenu')}
             >
               <Text style={styles.primaryButtonText}>Add First Item</Text>
@@ -579,7 +669,7 @@ function MenuManagementTab({
   );
 }
 
-// Deals Management Tab
+// REVISED Deals Management Tab - Now with proper scrolling like menu management
 function DealsManagementTab({
   menuItems,
   dealItems,
@@ -634,144 +724,193 @@ function DealsManagementTab({
 
   return (
     <View style={{ flex: 1 }}>
-      <View style={styles.formCard}>
+      <View style={{ paddingHorizontal: 16, marginBottom: 16 }}>
         <Text style={{ 
           fontSize: 16, 
           color: '#5d4037', 
           marginBottom: 16, 
           lineHeight: 22,
-          textAlign: 'center'
+          textAlign: 'center',
+          fontWeight: '600'
         }}>
           Select menu items to feature on the deals page and set their special prices.
         </Text>
+      </View>
 
-        <FlatList
-          data={menuItems}
-          style={{ maxHeight: 500 }}
-          keyExtractor={item => item.id}
-          renderItem={({ item }) => {
-            const isSelected = isItemSelected(item.id);
-            const deal = getDealForItem(item.id);
-            
-            return (
-              <View style={[
-                styles.listItem, 
-                { 
-                  backgroundColor: isSelected ? '#f0f7ff' : '#fff',
-                  borderLeftWidth: 4,
-                  borderLeftColor: isSelected ? '#4a6fa5' : 'transparent'
-                }
-              ]}>
-                <TouchableOpacity 
-                  onPress={() => toggleItemSelection(item)}
-                  style={{ flexDirection: 'row', alignItems: 'center', flex: 1 }}
-                >
-                  <Image 
-                    source={{ uri: item.image }} 
-                    style={{ width: 60, height: 60, borderRadius: 6, marginRight: 12 }} 
-                  />
-                  <View style={{ flex: 1 }}>
-                    <Text style={{ fontWeight: '700', color: '#5d4037' }}>{item.name}</Text>
-                    <Text style={{ color: '#8d6e63', fontSize: 12 }}>{item.course}</Text>
-                    <Text style={{ color: '#666', fontSize: 12, marginTop: 2 }}>
-                      Current Price: ${item.price}
+      <ScrollView style={{ flex: 1 }} contentContainerStyle={{ paddingBottom: 20 }}>
+        {menuItems.map(item => {
+          const isSelected = isItemSelected(item.id);
+          const deal = getDealForItem(item.id);
+          
+          return (
+            <View key={item.id} style={[
+              styles.menuRow,
+              { 
+                backgroundColor: isSelected ? '#f8f5f0' : '#fff',
+                borderLeftWidth: 4,
+                borderLeftColor: isSelected ? '#6d4c41' : 'transparent'
+              }
+            ]}>
+              <View style={{ flexDirection: 'row', alignItems: 'center', flex: 1 }}>
+                <Image 
+                  source={{ uri: item.image }} 
+                  style={{ width: 70, height: 70, borderRadius: 8, marginRight: 16 }} 
+                />
+                <View style={{ flex: 1 }}>
+                  <Text style={{ fontWeight: '700', fontSize: 16, color: '#5d4037' }}>{item.name}</Text>
+                  <Text style={{ color: '#8d6e63', fontSize: 13, fontWeight: '600' }}>{item.course}</Text>
+                  <Text style={{ color: '#5d4037', fontWeight: '700', fontSize: 16 }}>${item.price}</Text>
+                  <Text style={{ color: '#8d6e63', fontSize: 12, marginTop: 4 }} numberOfLines={2}>
+                    {item.description}
+                  </Text>
+                  
+                  {/* Deal Selection Toggle */}
+                  <TouchableOpacity 
+                    style={{ 
+                      flexDirection: 'row', 
+                      alignItems: 'center', 
+                      marginTop: 12,
+                      padding: 8,
+                      backgroundColor: isSelected ? '#e8f5e8' : '#f5f5f5',
+                      borderRadius: 8
+                    }}
+                    onPress={() => toggleItemSelection(item)}
+                  >
+                    <View style={{
+                      width: 20,
+                      height: 20,
+                      borderRadius: 10,
+                      borderWidth: 2,
+                      borderColor: isSelected ? '#28a745' : '#ccc',
+                      backgroundColor: isSelected ? '#28a745' : 'transparent',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      marginRight: 8
+                    }}>
+                      {isSelected && (
+                        <Text style={{ color: 'white', fontSize: 10, fontWeight: 'bold' }}>✓</Text>
+                      )}
+                    </View>
+                    <Text style={{ 
+                      color: isSelected ? '#28a745' : '#666', 
+                      fontWeight: '600',
+                      fontSize: 14
+                    }}>
+                      {isSelected ? 'Selected for Deals' : 'Add to Deals'}
                     </Text>
-                  </View>
-                  <View style={{
-                    width: 20,
-                    height: 20,
-                    borderRadius: 10,
-                    borderWidth: 2,
-                    borderColor: isSelected ? '#4a6fa5' : '#ccc',
-                    backgroundColor: isSelected ? '#4a6fa5' : 'transparent',
-                    alignItems: 'center',
-                    justifyContent: 'center'
-                  }}>
-                    {isSelected && (
-                      <Text style={{ color: 'white', fontSize: 12, fontWeight: 'bold' }}>✓</Text>
-                    )}
-                  </View>
-                </TouchableOpacity>
+                  </TouchableOpacity>
+                </View>
+              </View>
 
-                {isSelected && deal && (
-                  <View style={{ 
-                    marginTop: 12, 
-                    padding: 12, 
-                    backgroundColor: '#fff', 
-                    borderRadius: 8,
-                    borderWidth: 1,
-                    borderColor: '#e8d5c4'
-                  }}>
-                    <Text style={{ fontWeight: '600', marginBottom: 8, color: '#5d4037' }}>
+              {/* Deal Price Inputs */}
+              {isSelected && deal && (
+                <View style={{ 
+                  width: '100%', 
+                  marginTop: 12, 
+                  padding: 16, 
+                  backgroundColor: '#faf7f2', 
+                  borderRadius: 12,
+                  borderWidth: 1,
+                  borderColor: '#e8d5c4'
+                }}>
+                  <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
+                    <Text style={{ fontWeight: '700', color: '#5d4037', fontSize: 15 }}>
                       Set Deal Prices:
                     </Text>
-                    
-                    <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                      <View style={{ flex: 1, marginRight: 8 }}>
-                        <Text style={{ fontSize: 12, color: '#8d6e63', marginBottom: 4 }}>
-                          Previous Price
-                        </Text>
-                        <TextInput
-                          value={deal.previousPrice.toString()}
-                          onChangeText={(value) => updateDealPrice(item.id, 'previousPrice', value)}
-                          style={[styles.input, { textAlign: 'center' }]}
-                          keyboardType="decimal-pad"
-                          placeholder="Previous price"
-                        />
-                      </View>
-                      
-                      <View style={{ flex: 1, marginLeft: 8 }}>
-                        <Text style={{ fontSize: 12, color: '#8d6e63', marginBottom: 4 }}>
-                          New Price
-                        </Text>
-                        <TextInput
-                          value={deal.newPrice.toString()}
-                          onChangeText={(value) => updateDealPrice(item.id, 'newPrice', value)}
-                          style={[styles.input, { 
-                            textAlign: 'center',
-                            borderColor: deal.newPrice < deal.previousPrice ? '#28a745' : '#ff6b6b'
-                          }]}
-                          keyboardType="decimal-pad"
-                          placeholder="Deal price"
-                        />
-                      </View>
-                    </View>
-
-                    {deal.newPrice < deal.previousPrice && (
-                      <Text style={{ 
-                        fontSize: 12, 
-                        color: '#28a745', 
-                        textAlign: 'center',
-                        marginTop: 6,
-                        fontWeight: '600'
-                      }}>
-                        Save ${(deal.previousPrice - deal.newPrice).toFixed(2)}!
-                      </Text>
-                    )}
+                    <TouchableOpacity 
+                      style={{ 
+                        paddingHorizontal: 12,
+                        paddingVertical: 6,
+                        backgroundColor: '#e76f51',
+                        borderRadius: 8
+                      }}
+                      onPress={() => toggleItemSelection(item)}
+                    >
+                      <Text style={{ color: 'white', fontWeight: '700', fontSize: 12 }}>Remove Deal</Text>
+                    </TouchableOpacity>
                   </View>
-                )}
-              </View>
-            );
-          }}
-        />
+                  
+                  <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginBottom: 12 }}>
+                    <View style={{ flex: 1, marginRight: 8 }}>
+                      <Text style={{ fontSize: 13, color: '#8d6e63', marginBottom: 6, fontWeight: '600' }}>
+                        Previous Price
+                      </Text>
+                      <TextInput
+                        value={deal.previousPrice.toString()}
+                        onChangeText={(value) => updateDealPrice(item.id, 'previousPrice', value)}
+                        style={[styles.input, { textAlign: 'center' }]}
+                        keyboardType="decimal-pad"
+                        placeholder="Previous price"
+                      />
+                    </View>
+                    
+                    <View style={{ flex: 1, marginLeft: 8 }}>
+                      <Text style={{ fontSize: 13, color: '#8d6e63', marginBottom: 6, fontWeight: '600' }}>
+                        New Price
+                      </Text>
+                      <TextInput
+                        value={deal.newPrice.toString()}
+                        onChangeText={(value) => updateDealPrice(item.id, 'newPrice', value)}
+                        style={[styles.input, { 
+                          textAlign: 'center',
+                          borderColor: deal.newPrice < deal.previousPrice ? '#28a745' : '#ff6b6b'
+                        }]}
+                        keyboardType="decimal-pad"
+                        placeholder="Deal price"
+                      />
+                    </View>
+                  </View>
 
-        <View style={{ marginTop: 20, padding: 16, backgroundColor: '#f8f9fa', borderRadius: 8 }}>
-          <Text style={{ fontWeight: '600', color: '#5d4037', marginBottom: 8 }}>
+                  {deal.newPrice < deal.previousPrice && (
+                    <Text style={{ 
+                      fontSize: 13, 
+                      color: '#28a745', 
+                      textAlign: 'center',
+                      marginTop: 8,
+                      fontWeight: '700'
+                    }}>
+                      Save ${(deal.previousPrice - deal.newPrice).toFixed(2)}!
+                    </Text>
+                  )}
+                </View>
+              )}
+            </View>
+          );
+        })}
+        
+        {menuItems.length === 0 && (
+          <View style={styles.emptyState}>
+            <Text style={styles.emptyStateText}>
+              No menu items available.{'\n'}Add menu items first to create deals!
+            </Text>
+          </View>
+        )}
+
+        {/* Deal Summary */}
+        <View style={{ 
+          marginTop: 20, 
+          padding: 16, 
+          backgroundColor: '#f8f5f0', 
+          borderRadius: 12,
+          marginHorizontal: 16
+        }}>
+          <Text style={{ fontWeight: '700', color: '#5d4037', marginBottom: 8, fontSize: 15 }}>
             📊 Deal Summary
           </Text>
-          <Text style={{ fontSize: 14, color: '#8d6e63' }}>
+          <Text style={{ fontSize: 14, color: '#8d6e63', lineHeight: 20 }}>
             • {selectedItems.length} item(s) selected for deals{'\n'}
             • {selectedItems.filter(item => item.newPrice < item.previousPrice).length} item(s) with discounts
           </Text>
         </View>
 
+        {/* Save Button */}
         <TouchableOpacity 
-          style={[styles.primaryButton, { marginTop: 16 }]} 
+          style={[styles.primaryButton, { margin: 16 }]} 
           onPress={saveDeals}
         >
           <Text style={styles.primaryButtonText}>Save Deals</Text>
         </TouchableOpacity>
-      </View>
+      </ScrollView>
     </View>
   );
 }
@@ -796,14 +935,14 @@ function DealManagementScreen({
         dealItems={dealItems}
         onUpdateDeals={onUpdateDeals}
       />
-      <TouchableOpacity style={[styles.ghostButton, { margin: 12 }]} onPress={onBack}>
+      <TouchableOpacity style={[styles.ghostButton, { margin: 16 }]} onPress={onBack}>
         <Text style={styles.ghostButtonText}>Back</Text>
       </TouchableOpacity>
     </View>
   );
 }
 
-// Deals Screen - SHOWS DEAL ITEMS WITH DISCOUNTS
+// FIXED Deals Screen - Now with proper scrolling
 function DealsScreen({ 
   menuItems, 
   dealItems, 
@@ -815,6 +954,7 @@ function DealsScreen({
   filter: Course | 'All'; 
   onBack: () => void; 
 }) {
+  // Get active deals and match them with menu items
   const activeDeals = dealItems
     .filter(deal => deal.isActive)
     .map(deal => {
@@ -823,11 +963,123 @@ function DealsScreen({
     })
     .filter(Boolean) as (MenuItem & { deal: DealItem })[];
 
+  // Apply filter
   const filtered = filter === 'All' 
     ? activeDeals 
     : activeDeals.filter(item => item.course === filter);
 
   const hasDiscounts = activeDeals.some(item => item.deal.newPrice < item.deal.previousPrice);
+
+  // Render deal item
+  const renderDealItem = ({ item }: { item: MenuItem & { deal: DealItem } }) => (
+    <View style={[
+      styles.menuCard,
+      { 
+        borderColor: item.deal.newPrice < item.deal.previousPrice ? '#ff6b6b' : '#e8d5c4',
+        borderWidth: item.deal.newPrice < item.deal.previousPrice ? 2 : 1
+      }
+    ]}>
+      {item.deal.newPrice < item.deal.previousPrice && (
+        <View style={styles.saleBadge}>
+          <Text style={styles.saleBadgeText}>
+            SALE
+          </Text>
+        </View>
+      )}
+      
+      <Image source={{ uri: item.image }} style={styles.menuImage} resizeMode="cover" />
+      <View style={styles.cardContent}>
+        <Text style={{ fontWeight: '700', fontSize: 15, color: '#5d4037', marginBottom: 4 }}>
+          {item.name}
+        </Text>
+        <Text style={styles.cardDescription}>{item.description}</Text>
+        
+        <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 6 }}>
+          {item.deal.newPrice < item.deal.previousPrice ? (
+            <>
+              <Text style={{
+                fontSize: 14,
+                color: '#8d6e63',
+                textDecorationLine: 'line-through',
+                marginRight: 8,
+                fontWeight: '600'
+              }}>
+                ${item.deal.previousPrice}
+              </Text>
+              <Text style={{
+                fontSize: 18,
+                fontWeight: '800',
+                color: '#ff6b6b'
+              }}>
+                ${item.deal.newPrice}
+              </Text>
+              <Text style={{
+                fontSize: 11,
+                color: '#28a745',
+                marginLeft: 8,
+                fontWeight: '700'
+              }}>
+                Save ${(item.deal.previousPrice - item.deal.newPrice).toFixed(2)}
+              </Text>
+            </>
+          ) : (
+            <Text style={{
+              fontSize: 18,
+              fontWeight: '800',
+              color: '#5d4037'
+            }}>
+              ${item.deal.newPrice}
+            </Text>
+          )}
+        </View>
+        
+        <Text style={{ 
+          color: '#8d6e63', 
+          fontSize: 12, 
+          marginTop: 6,
+          fontWeight: '600'
+        }}>
+          {item.course}
+        </Text>
+      </View>
+    </View>
+  );
+
+  // Render header with sale banner
+  const renderHeader = () => (
+    <>
+      {hasDiscounts && (
+        <View style={{
+          backgroundColor: '#fff3cd',
+          padding: 16,
+          marginHorizontal: 16,
+          marginBottom: 20,
+          borderRadius: 12,
+          borderLeftWidth: 4,
+          borderLeftColor: '#ffc107'
+        }}>
+          <Text style={{ color: '#856404', fontSize: 15, fontWeight: '700', textAlign: 'center' }}>
+            🎉 Limited Time Offers - Save on Your Favorites!
+          </Text>
+        </View>
+      )}
+    </>
+  );
+
+  // Render empty state
+  const renderEmptyState = () => (
+    <View style={styles.emptyState}>
+      <Text style={styles.emptyStateText}>
+        {activeDeals.length === 0 ? 'No deals available' : 'No deals found for this filter'}
+      </Text>
+      <Text style={styles.emptyStateSubtext}>
+        {activeDeals.length === 0 
+          ? 'Check back later for special offers!' 
+          : 'Try selecting a different filter'
+        }
+      </Text>
+    </View>
+  );
 
   return (
     <View style={styles.screen}>
@@ -835,139 +1087,35 @@ function DealsScreen({
         Special Deals{filter !== 'All' ? ` — ${filter}` : ''}
       </Text>
 
-      {hasDiscounts && (
-        <View style={{
-          backgroundColor: '#fff3cd',
-          padding: 12,
-          marginHorizontal: 16,
-          marginBottom: 16,
-          borderRadius: 8,
-          borderLeftWidth: 4,
-          borderLeftColor: '#ffc107'
-        }}>
-          <Text style={{ color: '#856404', fontSize: 14, fontWeight: '600', textAlign: 'center' }}>
-            🎉 Limited Time Offers - Save on Your Favorites!
-          </Text>
+      {filtered.length === 0 ? (
+        <ScrollView style={{ flex: 1 }} contentContainerStyle={{ paddingBottom: 100 }}>
+          {renderHeader()}
+          {renderEmptyState()}
+        </ScrollView>
+      ) : (
+        <View style={{ flex: 1 }}>
+          <FlatList
+            data={filtered}
+            keyExtractor={item => item.id}
+            renderItem={renderDealItem}
+            ListHeaderComponent={renderHeader}
+            numColumns={2}
+            columnWrapperStyle={{ justifyContent: 'space-between', paddingHorizontal: 12 }}
+            contentContainerStyle={{ 
+              paddingBottom: 100, // Extra padding at bottom to ensure content is visible above the back button
+              flexGrow: 1 
+            }}
+            showsVerticalScrollIndicator={false}
+            style={{ flex: 1 }}
+          />
         </View>
       )}
-
-      <ScrollView style={{ flex: 1, paddingHorizontal: 12 }} contentContainerStyle={{ paddingBottom: 20 }}>
-        {filtered.length === 0 ? (
-          <View style={{ 
-            padding: 40, 
-            alignItems: 'center',
-            backgroundColor: '#fff',
-            margin: 16,
-            borderRadius: 12
-          }}>
-            <Text style={{ 
-              fontSize: 16, 
-              color: '#8d6e63', 
-              textAlign: 'center',
-              marginBottom: 8
-            }}>
-              {activeDeals.length === 0 ? 'No deals available' : 'No deals found for this filter'}
-            </Text>
-            <Text style={{ 
-              fontSize: 14, 
-              color: '#a1887f', 
-              textAlign: 'center' 
-            }}>
-              {activeDeals.length === 0 
-                ? 'Check back later for special offers!' 
-                : 'Try selecting a different filter'
-              }
-            </Text>
-          </View>
-        ) : (
-          <View style={{ flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between' }}>
-            {filtered.map(item => (
-              <View key={item.id} style={[
-                styles.menuCard,
-                { 
-                  borderColor: item.deal.newPrice < item.deal.previousPrice ? '#ff6b6b' : '#e8d5c4',
-                  borderWidth: item.deal.newPrice < item.deal.previousPrice ? 2 : 1
-                }
-              ]}>
-                {item.deal.newPrice < item.deal.previousPrice && (
-                  <View style={{
-                    position: 'absolute',
-                    top: 8,
-                    right: 8,
-                    backgroundColor: '#ff6b6b',
-                    paddingHorizontal: 8,
-                    paddingVertical: 4,
-                    borderRadius: 12,
-                    zIndex: 1
-                  }}>
-                    <Text style={{ color: 'white', fontSize: 10, fontWeight: '700' }}>
-                      SALE
-                    </Text>
-                  </View>
-                )}
-                
-                <Image source={{ uri: item.image }} style={styles.menuImage} resizeMode="cover" />
-                <View style={styles.cardContent}>
-                  <Text style={{ fontWeight: '700', fontSize: 14, color: '#5d4037' }}>
-                    {item.name}
-                  </Text>
-                  <Text style={styles.cardDescription}>{item.description}</Text>
-                  
-                  <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 4 }}>
-                    {item.deal.newPrice < item.deal.previousPrice ? (
-                      <>
-                        <Text style={{
-                          fontSize: 13,
-                          color: '#8d6e63',
-                          textDecorationLine: 'line-through',
-                          marginRight: 8
-                        }}>
-                          ${item.deal.previousPrice}
-                        </Text>
-                        <Text style={{
-                          fontSize: 16,
-                          fontWeight: '700',
-                          color: '#ff6b6b'
-                        }}>
-                          ${item.deal.newPrice}
-                        </Text>
-                        <Text style={{
-                          fontSize: 10,
-                          color: '#28a745',
-                          marginLeft: 8,
-                          fontWeight: '600'
-                        }}>
-                          Save ${(item.deal.previousPrice - item.deal.newPrice).toFixed(2)}
-                        </Text>
-                      </>
-                    ) : (
-                      <Text style={{
-                        fontSize: 16,
-                        fontWeight: '700',
-                        color: '#5d4037'
-                      }}>
-                        ${item.deal.newPrice}
-                      </Text>
-                    )}
-                  </View>
-                  
-                  <Text style={{ 
-                    color: '#8d6e63', 
-                    fontSize: 11, 
-                    marginTop: 4 
-                  }}>
-                    {item.course}
-                  </Text>
-                </View>
-              </View>
-            ))}
-          </View>
-        )}
-      </ScrollView>
       
-      <TouchableOpacity style={[styles.ghostButton, { margin: 12 }]} onPress={onBack}>
-        <Text style={styles.ghostButtonText}>Back to Menu</Text>
-      </TouchableOpacity>
+      <View style={{ paddingHorizontal: 16, paddingBottom: 20 }}>
+        <TouchableOpacity style={styles.ghostButton} onPress={onBack}>
+          <Text style={styles.ghostButtonText}>Back to Menu</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }
@@ -1026,7 +1174,7 @@ function HomeScreen({
             style={[styles.filterBtn, currentFilter === 'All' && styles.filterBtnActive]}
             onPress={() => onSelectCourse('All')}
           >
-            <Text>All</Text>
+            <Text style={[styles.filterBtnText, currentFilter === 'All' && styles.filterBtnTextActive]}>All</Text>
           </TouchableOpacity>
           {COURSES.map(c => (
             <TouchableOpacity
@@ -1034,7 +1182,7 @@ function HomeScreen({
               style={[styles.filterBtn, currentFilter === c && styles.filterBtnActive]}
               onPress={() => onSelectCourse(c)}
             >
-              <Text>{c}</Text>
+              <Text style={[styles.filterBtnText, currentFilter === c && styles.filterBtnTextActive]}>{c}</Text>
             </TouchableOpacity>
           ))}
         </ScrollView>
@@ -1047,9 +1195,9 @@ function HomeScreen({
               <View key={item.id} style={styles.menuCard}>
                 <Image source={{ uri: item.image }} style={styles.menuImage} resizeMode="cover" />
                 <View style={styles.cardContent}>
-                  <Text style={{ fontWeight: '700', fontSize: 14 }}>{item.name}</Text>
+                  <Text style={{ fontWeight: '700', fontSize: 15, color: '#5d4037' }}>{item.name}</Text>
                   <Text style={styles.cardDescription}>{item.description}</Text>
-                  <Text style={{ color: '#666', fontSize: 12 }}>{item.course} • ${item.price}</Text>
+                  <Text style={{ color: '#8d6e63', fontSize: 12, fontWeight: '600' }}>{item.course} • ${item.price}</Text>
                   
                   <TouchableOpacity
                     style={styles.secondaryButton}
@@ -1061,17 +1209,17 @@ function HomeScreen({
               </View>
             ))}
             {filtered.length === 0 && (
-              <View style={{ padding: 12, width: '100%' }}>
-                <Text>No items found for this filter.</Text>
+              <View style={styles.emptyState}>
+                <Text style={styles.emptyStateText}>No items found for this filter.</Text>
               </View>
             )}
           </View>
 
-          <View style={{ marginTop: 12 }}>
+          <View style={{ marginTop: 20 }}>
             <TouchableOpacity style={styles.primaryButton} onPress={() => onOpenScreen('Search')}>
               <Text style={styles.primaryButtonText}>Search menu</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={[styles.ghostButton, { marginTop: 8 }]} onPress={() => onOpenScreen('Deals')}>
+            <TouchableOpacity style={[styles.ghostButton, { marginTop: 12 }]} onPress={() => onOpenScreen('Deals')}>
               <Text style={styles.ghostButtonText}>View deals ({dealItemsCount})</Text>
             </TouchableOpacity>
             <TouchableOpacity style={[styles.ghostButton, { marginTop: 8 }]} onPress={() => onOpenScreen('Contact')}>
@@ -1118,20 +1266,21 @@ function SearchScreen({
       <Text style={styles.screenHeader}>Search</Text>
       <View style={styles.formCard}>
         <TextInput
-          placeholder="Search by name or description"
+          placeholder="Search by name or description..."
           value={query}
           onChangeText={setQuery}
           style={styles.input}
+          placeholderTextColor="#a1887f"
         />
         
         {/* FILTERING SYSTEM IN SEARCH */}
-        <Text style={{ marginTop: 12, marginBottom: 8, fontWeight: '600' }}>Filter by course:</Text>
-        <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ marginBottom: 12 }}>
+        <Text style={{ marginTop: 16, marginBottom: 12, fontWeight: '700', color: '#5d4037' }}>Filter by course:</Text>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ marginBottom: 16 }}>
           <TouchableOpacity
             style={[styles.filterBtn, searchFilter === 'All' && styles.filterBtnActive]}
             onPress={() => setSearchFilter('All')}
           >
-            <Text>All</Text>
+            <Text style={[styles.filterBtnText, searchFilter === 'All' && styles.filterBtnTextActive]}>All</Text>
           </TouchableOpacity>
           {COURSES.map(c => (
             <TouchableOpacity
@@ -1139,12 +1288,12 @@ function SearchScreen({
               style={[styles.filterBtn, searchFilter === c && styles.filterBtnActive]}
               onPress={() => setSearchFilter(c)}
             >
-              <Text>{c}</Text>
+              <Text style={[styles.filterBtnText, searchFilter === c && styles.filterBtnTextActive]}>{c}</Text>
             </TouchableOpacity>
           ))}
         </ScrollView>
 
-        <Text style={{ fontSize: 12, color: '#666', marginBottom: 8 }}>
+        <Text style={{ fontSize: 14, color: '#8d6e63', marginBottom: 12, fontWeight: '600' }}>
           {filtered.length} items found {searchFilter !== 'All' ? `in ${searchFilter}` : ''}
           {query && ` matching "${query}"`}
         </Text>
@@ -1161,27 +1310,27 @@ function SearchScreen({
               <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                 <Image 
                   source={{ uri: item.image }} 
-                  style={{ width: 60, height: 60, borderRadius: 6, marginRight: 12 }} 
+                  style={{ width: 70, height: 70, borderRadius: 8, marginRight: 16 }} 
                 />
                 <View style={{ flex: 1 }}>
-                  <Text style={{ fontWeight: '700' }}>{item.name}</Text>
-                  <Text style={{ color: '#666', fontSize: 12 }}>{item.description}</Text>
-                  <Text style={{ color: '#666', fontSize: 12 }}>{item.course} • ${item.price}</Text>
+                  <Text style={{ fontWeight: '700', fontSize: 16, color: '#5d4037' }}>{item.name}</Text>
+                  <Text style={{ color: '#8d6e63', fontSize: 13, marginTop: 2 }}>{item.description}</Text>
+                  <Text style={{ color: '#8d6e63', fontSize: 14, marginTop: 4, fontWeight: '600' }}>{item.course} • ${item.price}</Text>
                 </View>
               </View>
             </TouchableOpacity>
           )}
           ListEmptyComponent={
-            <View style={{ padding: 20, alignItems: 'center' }}>
-              <Text style={{ color: '#666' }}>No items found</Text>
-              <Text style={{ color: '#666', fontSize: 12, marginTop: 4 }}>
+            <View style={styles.emptyState}>
+              <Text style={styles.emptyStateText}>No items found</Text>
+              <Text style={styles.emptyStateSubtext}>
                 {query ? 'Try a different search term' : 'Search for menu items above'}
               </Text>
             </View>
           }
         />
-        <TouchableOpacity style={[styles.ghostButton, { marginTop: 8 }]} onPress={onBack}>
-          <Text style={styles.ghostButtonText}>Back</Text>
+        <TouchableOpacity style={[styles.ghostButton, { marginTop: 16 }]} onPress={onBack}>
+          <Text style={styles.ghostButtonText}>Back to Menu</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -1209,8 +1358,8 @@ function PersonalMenuScreen({
       <ScrollView style={{ flex: 1 }} contentContainerStyle={{ paddingBottom: 20 }}>
         <View style={{ paddingHorizontal: 12 }}>
           {personalMenuItems.length === 0 ? (
-            <View style={{ padding: 20, alignItems: 'center' }}>
-              <Text style={{ color: '#666', textAlign: 'center' }}>
+            <View style={styles.emptyState}>
+              <Text style={styles.emptyStateText}>
                 Your personal menu is empty.{'\n'}Add items from the Home or Search screens!
               </Text>
             </View>
@@ -1221,16 +1370,16 @@ function PersonalMenuScreen({
                   <View style={{ flexDirection: 'row', alignItems: 'center', flex: 1 }}>
                     <Image 
                       source={{ uri: item.image }} 
-                      style={{ width: 60, height: 60, borderRadius: 6, marginRight: 12 }} 
+                      style={{ width: 70, height: 70, borderRadius: 8, marginRight: 16 }} 
                     />
                     <View style={{ flex: 1 }}>
-                      <Text style={{ fontWeight: '700' }}>{item.name}</Text>
-                      <Text style={{ color: '#666', fontSize: 12 }}>{item.course}</Text>
-                      <Text style={{ color: '#2a9d8f', fontWeight: '600' }}>${item.price}</Text>
+                      <Text style={{ fontWeight: '700', fontSize: 16, color: '#5d4037' }}>{item.name}</Text>
+                      <Text style={{ color: '#8d6e63', fontSize: 14, fontWeight: '600' }}>{item.course}</Text>
+                      <Text style={{ color: '#2a9d8f', fontWeight: '700', fontSize: 18 }}>${item.price}</Text>
                     </View>
                   </View>
                   <TouchableOpacity 
-                    style={[styles.secondaryButton, { paddingHorizontal: 8 }]} 
+                    style={[styles.secondaryButton, { paddingHorizontal: 12 }]} 
                     onPress={() => onRemoveFromPersonalMenu(item.id)}
                   >
                     <Text style={{ color: '#e76f51', fontWeight: '700', fontSize: 12 }}>Remove</Text>
@@ -1238,7 +1387,7 @@ function PersonalMenuScreen({
                 </View>
               ))}
               
-              <View style={[styles.infoCard, { marginTop: 16 }]}>
+              <View style={[styles.infoCard, { marginTop: 20 }]}>
                 <Text style={styles.infoTitle}>Total Price</Text>
                 <Text style={[styles.infoValue, { color: '#2a9d8f' }]}>${totalPrice}</Text>
               </View>
@@ -1247,13 +1396,13 @@ function PersonalMenuScreen({
         </View>
       </ScrollView>
 
-      <View style={{ paddingHorizontal: 12 }}>
+      <View style={{ paddingHorizontal: 16 }}>
         {personalMenuItems.length > 0 && (
           <TouchableOpacity style={styles.primaryButton} onPress={onPay}>
             <Text style={styles.primaryButtonText}>Proceed to Payment (${totalPrice})</Text>
           </TouchableOpacity>
         )}
-        <TouchableOpacity style={[styles.ghostButton, { marginTop: 8 }]} onPress={onBack}>
+        <TouchableOpacity style={[styles.ghostButton, { marginTop: 12 }]} onPress={onBack}>
           <Text style={styles.ghostButtonText}>Back to Menu</Text>
         </TouchableOpacity>
       </View>
@@ -1290,6 +1439,7 @@ function LoginScreen({
           value={username}
           onChangeText={setUsername}
           style={styles.input}
+          placeholderTextColor="#a1887f"
         />
         <TextInput
           placeholder="Email"
@@ -1298,6 +1448,7 @@ function LoginScreen({
           style={styles.input}
           keyboardType="email-address"
           autoCapitalize="none"
+          placeholderTextColor="#a1887f"
         />
         <TextInput
           placeholder="Password"
@@ -1305,13 +1456,14 @@ function LoginScreen({
           onChangeText={setPassword}
           style={styles.input}
           secureTextEntry
+          placeholderTextColor="#a1887f"
         />
 
         <TouchableOpacity style={styles.primaryButton} onPress={onLogin}>
           <Text style={styles.primaryButtonText}>Login</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={[styles.ghostButton, { marginTop: 8 }]} onPress={onSignup}>
+        <TouchableOpacity style={[styles.ghostButton, { marginTop: 12 }]} onPress={onSignup}>
           <Text style={styles.ghostButtonText}>Sign up (demo)</Text>
         </TouchableOpacity>
       </View>
@@ -1376,29 +1528,30 @@ function ContactScreen({ onBack }: { onBack: () => void }) {
             color: '#5d4037', 
             marginBottom: 16, 
             lineHeight: 22,
-            textAlign: 'center'
+            textAlign: 'center',
+            fontWeight: '600'
           }}>
             Have questions, feedback, or special requests? Send a message directly to our chef!
           </Text>
 
           <View style={{ 
-            backgroundColor: '#faf4ed', 
+            backgroundColor: '#faf7f2', 
             padding: 16, 
-            borderRadius: 8, 
+            borderRadius: 12, 
             marginBottom: 20,
             borderLeftWidth: 4,
             borderLeftColor: '#8d6e63'
           }}>
-            <Text style={{ fontWeight: '700', color: '#5d4037', marginBottom: 8 }}>
+            <Text style={{ fontWeight: '700', color: '#5d4037', marginBottom: 8, fontSize: 16 }}>
               Contact Information
             </Text>
-            <Text style={{ color: '#8d6e63', marginBottom: 4 }}>
+            <Text style={{ color: '#8d6e63', marginBottom: 6, fontSize: 14 }}>
               📧 Email: chef@tastebuddies.example
             </Text>
-            <Text style={{ color: '#8d6e63', marginBottom: 4 }}>
+            <Text style={{ color: '#8d6e63', marginBottom: 6, fontSize: 14 }}>
               📞 Phone: +1 (555) 123-CHEF
             </Text>
-            <Text style={{ color: '#8d6e63' }}>
+            <Text style={{ color: '#8d6e63', fontSize: 14 }}>
               ⏰ Hours: Mon-Sun, 9AM-10PM
             </Text>
           </View>
@@ -1445,7 +1598,7 @@ function ContactScreen({ onBack }: { onBack: () => void }) {
           />
 
           <Text style={{ 
-            fontSize: 12, 
+            fontSize: 13, 
             color: '#8d6e63', 
             marginBottom: 16,
             fontStyle: 'italic'
@@ -1479,17 +1632,17 @@ function ContactScreen({ onBack }: { onBack: () => void }) {
             </TouchableOpacity>
           </View>
 
-          <View style={{ marginTop: 20, padding: 16, backgroundColor: '#f8f9fa', borderRadius: 8 }}>
-            <Text style={{ fontWeight: '600', color: '#5d4037', marginBottom: 8 }}>
+          <View style={{ marginTop: 20, padding: 16, backgroundColor: '#f8f5f0', borderRadius: 12 }}>
+            <Text style={{ fontWeight: '700', color: '#5d4037', marginBottom: 8, fontSize: 15 }}>
               💡 Quick Message Ideas:
             </Text>
-            <Text style={{ fontSize: 12, color: '#8d6e63', lineHeight: 16 }}>
+            <Text style={{ fontSize: 13, color: '#8d6e63', lineHeight: 18 }}>
               • "I have dietary restrictions - can you accommodate?"
             </Text>
-            <Text style={{ fontSize: 12, color: '#8d6e63', lineHeight: 16 }}>
+            <Text style={{ fontSize: 13, color: '#8d6e63', lineHeight: 18 }}>
               • "Loved the [dish name]! Could I get the recipe?"
             </Text>
-            <Text style={{ fontSize: 12, color: '#8d6e63', lineHeight: 16 }}>
+            <Text style={{ fontSize: 13, color: '#8d6e63', lineHeight: 18 }}>
               • "Do you offer cooking classes or private events?"
             </Text>
           </View>
@@ -1525,13 +1678,14 @@ function PaymentScreen({ onBack, onPaySuccess }: { onBack: () => void; onPaySucc
     <View style={styles.screen}>
       <Text style={styles.screenHeader}>Payment</Text>
       <View style={styles.formCard}>
-        <Text style={{ fontWeight: '700', marginBottom: 6 }}>Enter payment details</Text>
+        <Text style={{ fontWeight: '700', marginBottom: 8, color: '#5d4037', fontSize: 16 }}>Enter payment details</Text>
 
         <TextInput
           placeholder="Name on card"
           value={nameOnCard}
           onChangeText={setNameOnCard}
           style={styles.input}
+          placeholderTextColor="#a1887f"
         />
         <TextInput
           placeholder="Card number"
@@ -1539,6 +1693,7 @@ function PaymentScreen({ onBack, onPaySuccess }: { onBack: () => void; onPaySucc
           onChangeText={setCardNumber}
           style={styles.input}
           keyboardType="number-pad"
+          placeholderTextColor="#a1887f"
         />
         <TextInput
           placeholder="CVV"
@@ -1547,13 +1702,14 @@ function PaymentScreen({ onBack, onPaySuccess }: { onBack: () => void; onPaySucc
           style={styles.input}
           keyboardType="number-pad"
           secureTextEntry
+          placeholderTextColor="#a1887f"
         />
 
         <TouchableOpacity style={styles.primaryButton} onPress={handlePay}>
           <Text style={styles.primaryButtonText}>Pay</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={[styles.ghostButton, { marginTop: 8 }]} onPress={onBack}>
+        <TouchableOpacity style={[styles.ghostButton, { marginTop: 12 }]} onPress={onBack}>
           <Text style={styles.ghostButtonText}>Back</Text>
         </TouchableOpacity>
       </View>
@@ -1614,6 +1770,7 @@ function AddMenuScreen({
             value={name}
             onChangeText={setName}
             style={styles.input}
+            placeholderTextColor="#a1887f"
           />
           <TextInput
             placeholder="Description"
@@ -1621,33 +1778,34 @@ function AddMenuScreen({
             onChangeText={setDescription}
             style={[styles.input, { height: 80, textAlignVertical: 'top' }]}
             multiline
+            placeholderTextColor="#a1887f"
           />
           
-          <Text style={{ marginTop: 12, marginBottom: 8, fontWeight: '600' }}>Course *</Text>
-          <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ marginBottom: 12 }}>
+          <Text style={{ marginTop: 16, marginBottom: 12, fontWeight: '700', color: '#5d4037' }}>Course *</Text>
+          <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ marginBottom: 16 }}>
             <TouchableOpacity
               style={[styles.filterBtn, course === 'Starter' && styles.filterBtnActive]}
               onPress={() => setCourse('Starter')}
             >
-              <Text>Starter</Text>
+              <Text style={[styles.filterBtnText, course === 'Starter' && styles.filterBtnTextActive]}>Starter</Text>
             </TouchableOpacity>
             <TouchableOpacity
               style={[styles.filterBtn, course === 'Main' && styles.filterBtnActive]}
               onPress={() => setCourse('Main')}
             >
-              <Text>Main</Text>
+              <Text style={[styles.filterBtnText, course === 'Main' && styles.filterBtnTextActive]}>Main</Text>
             </TouchableOpacity>
             <TouchableOpacity
               style={[styles.filterBtn, course === 'Dessert' && styles.filterBtnActive]}
               onPress={() => setCourse('Dessert')}
             >
-              <Text>Dessert</Text>
+              <Text style={[styles.filterBtnText, course === 'Dessert' && styles.filterBtnTextActive]}>Dessert</Text>
             </TouchableOpacity>
             <TouchableOpacity
               style={[styles.filterBtn, course === 'Drink' && styles.filterBtnActive]}
               onPress={() => setCourse('Drink')}
             >
-              <Text>Drink</Text>
+              <Text style={[styles.filterBtnText, course === 'Drink' && styles.filterBtnTextActive]}>Drink</Text>
             </TouchableOpacity>
           </ScrollView>
 
@@ -1657,6 +1815,7 @@ function AddMenuScreen({
             onChangeText={setPrice}
             style={styles.input}
             keyboardType="decimal-pad"
+            placeholderTextColor="#a1887f"
           />
           
           <TextInput
@@ -1665,9 +1824,10 @@ function AddMenuScreen({
             onChangeText={setImage}
             style={styles.input}
             autoCapitalize="none"
+            placeholderTextColor="#a1887f"
           />
           
-          <Text style={{ fontSize: 12, color: '#666', marginTop: 4, marginBottom: 12 }}>
+          <Text style={{ fontSize: 13, color: '#8d6e63', marginTop: 8, marginBottom: 16, fontStyle: 'italic' }}>
             * Required fields
           </Text>
 
@@ -1675,7 +1835,7 @@ function AddMenuScreen({
             <Text style={styles.primaryButtonText}>Add Item</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={[styles.ghostButton, { marginTop: 8 }]} onPress={onCancel}>
+          <TouchableOpacity style={[styles.ghostButton, { marginTop: 12 }]} onPress={onCancel}>
             <Text style={styles.ghostButtonText}>Cancel</Text>
           </TouchableOpacity>
         </View>
@@ -1732,6 +1892,7 @@ function EditMenuScreen({
           value={name}
           onChangeText={setName}
           style={styles.input}
+          placeholderTextColor="#a1887f"
         />
         <TextInput
           placeholder="Description"
@@ -1739,6 +1900,7 @@ function EditMenuScreen({
           onChangeText={setDescription}
           style={[styles.input, { height: 80 }]}
           multiline
+          placeholderTextColor="#a1887f"
         />
         <TextInput
           placeholder="Price"
@@ -1746,6 +1908,7 @@ function EditMenuScreen({
           onChangeText={setPrice}
           style={styles.input}
           keyboardType="numeric"
+          placeholderTextColor="#a1887f"
         />
         <TextInput
           placeholder="Image URL (optional)"
@@ -1753,33 +1916,34 @@ function EditMenuScreen({
           onChangeText={setImage}
           style={styles.input}
           autoCapitalize="none"
+          placeholderTextColor="#a1887f"
         />
 
-        <Text style={{ marginTop: 12, marginBottom: 8, fontWeight: '600' }}>Course</Text>
-        <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ marginBottom: 12 }}>
+        <Text style={{ marginTop: 16, marginBottom: 12, fontWeight: '700', color: '#5d4037' }}>Course</Text>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ marginBottom: 16 }}>
           <TouchableOpacity
             style={[styles.filterBtn, course === 'Starter' && styles.filterBtnActive]}
             onPress={() => setCourse('Starter')}
           >
-            <Text>Starter</Text>
+            <Text style={[styles.filterBtnText, course === 'Starter' && styles.filterBtnTextActive]}>Starter</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={[styles.filterBtn, course === 'Main' && styles.filterBtnActive]}
             onPress={() => setCourse('Main')}
           >
-            <Text>Main</Text>
+            <Text style={[styles.filterBtnText, course === 'Main' && styles.filterBtnTextActive]}>Main</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={[styles.filterBtn, course === 'Dessert' && styles.filterBtnActive]}
             onPress={() => setCourse('Dessert')}
           >
-            <Text>Dessert</Text>
+            <Text style={[styles.filterBtnText, course === 'Dessert' && styles.filterBtnTextActive]}>Dessert</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={[styles.filterBtn, course === 'Drink' && styles.filterBtnActive]}
             onPress={() => setCourse('Drink')}
           >
-            <Text>Drink</Text>
+            <Text style={[styles.filterBtnText, course === 'Drink' && styles.filterBtnTextActive]}>Drink</Text>
           </TouchableOpacity>
         </ScrollView>
 
@@ -1787,7 +1951,7 @@ function EditMenuScreen({
           <Text style={styles.primaryButtonText}>Save Changes</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={[styles.ghostButton, { marginTop: 8 }]} onPress={onCancel}>
+        <TouchableOpacity style={[styles.ghostButton, { marginTop: 12 }]} onPress={onCancel}>
           <Text style={styles.ghostButtonText}>Cancel</Text>
         </TouchableOpacity>
       </View>
@@ -1828,8 +1992,38 @@ export default function App() {
     { id: uuidv4(), name: 'Fresh Lemonade', description: 'Sparkling homemade lemonade with mint leaves.', course: 'Drink', price: 30, image: 'https://i.pinimg.com/736x/75/8e/8f/758e8fcb501b48b5db38c6fb83f8c46d.jpg' },
   ]);
 
-  // NEW: Deal items state
-  const [dealItems, setDealItems] = useState<DealItem[]>([]);
+  // NEW: Deal items state - Initialize with some sample deals
+  const [dealItems, setDealItems] = useState<DealItem[]>([
+    {
+      id: uuidv4(),
+      menuItemId: menuItems[0].id, // Tomato Bruschetta
+      previousPrice: 45,
+      newPrice: 35,
+      isActive: true,
+    },
+    {
+      id: uuidv4(),
+      menuItemId: menuItems[3].id, // Creamy Mushroom Pasta
+      previousPrice: 85,
+      newPrice: 65,
+      isActive: true,
+    },
+    {
+      id: uuidv4(),
+      menuItemId: menuItems[8].id, // Chocolate Mousse
+      previousPrice: 40,
+      newPrice: 30,
+      isActive: true,
+    },
+    {
+      id: uuidv4(),
+      menuItemId: menuItems[11].id, // Berry Smoothie
+      previousPrice: 45,
+      newPrice: 35,
+      isActive: true,
+    },
+  ]);
+
   const [personalMenuItems, setPersonalMenuItems] = useState<MenuItem[]>([]);
   const [editingItem, setEditingItem] = useState<MenuItem | null>(null);
   const [selectedCourseFilter, setSelectedCourseFilter] = useState<Course | 'All'>('All');
@@ -1987,16 +2181,16 @@ export default function App() {
                 <View style={{ flexDirection: 'row', alignItems: 'center', flex: 1 }}>
                   <Image 
                     source={{ uri: item.image }} 
-                    style={{ width: 60, height: 60, borderRadius: 6, marginRight: 12 }} 
+                    style={{ width: 70, height: 70, borderRadius: 8, marginRight: 16 }} 
                   />
                   <View style={{ flex: 1 }}>
-                    <Text style={{ fontWeight: '700' }}>{item.name}</Text>
-                    <Text style={{ color: '#666' }}>{item.course} • ${item.price}</Text>
+                    <Text style={{ fontWeight: '700', fontSize: 16, color: '#5d4037' }}>{item.name}</Text>
+                    <Text style={{ color: '#8d6e63', fontSize: 14, fontWeight: '600' }}>{item.course} • ${item.price}</Text>
                   </View>
                 </View>
                 <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                   <TouchableOpacity 
-                    style={[styles.secondaryButton, { marginRight: 8, paddingHorizontal: 8 }]} 
+                    style={[styles.secondaryButton, { marginRight: 8, paddingHorizontal: 12 }]} 
                     onPress={() => {
                       setEditingItem(item);
                       setScreen('EditMenu');
@@ -2005,7 +2199,7 @@ export default function App() {
                     <Text style={{ color: '#2a9d8f', fontWeight: '700', fontSize: 12 }}>Edit</Text>
                   </TouchableOpacity>
                   <TouchableOpacity 
-                    style={[styles.secondaryButton, { paddingHorizontal: 8 }]} 
+                    style={[styles.secondaryButton, { paddingHorizontal: 12 }]} 
                     onPress={() => removeMenuItem(item.id)}
                   >
                     <Text style={{ color: '#e76f51', fontWeight: '700', fontSize: 12 }}>Remove</Text>
@@ -2014,7 +2208,7 @@ export default function App() {
               </View>
             ))}
           </ScrollView>
-          <TouchableOpacity style={[styles.ghostButton, { margin: 12 }]} onPress={() => setScreen('Home')}>
+          <TouchableOpacity style={[styles.ghostButton, { margin: 16 }]} onPress={() => setScreen('Home')}>
             <Text style={styles.ghostButtonText}>Back</Text>
           </TouchableOpacity>
         </View>
@@ -2059,17 +2253,20 @@ export default function App() {
         </View>
       )}
 
-      {/* Floating Action Buttons */}
+      {/* Floating Action Buttons - Fixed positioning */}
       {isAdmin && screen !== 'AddMenu' && screen !== 'Login' && screen !== 'DealManagement' && screen !== 'Manage' && (
-        <View style={{ position: 'absolute', right: 20, bottom: 80 }}>
+        <View style={styles.fabContainer}>
           <TouchableOpacity 
-            style={[styles.fab, { marginBottom: 8 }]} 
+            style={[styles.fab, { backgroundColor: '#5d4037' }]} 
             onPress={() => setScreen('Manage')}
           >
-            <Text style={{color:'#fff', fontWeight:'700', fontSize: 12}}>⚙️ Manage</Text>
+            <Text style={styles.fabText}>⚙️ Manage</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.fab} onPress={() => setScreen('AddMenu')}>
-            <Text style={{color:'#fff', fontWeight:'700'}}>+ Add</Text>
+          <TouchableOpacity 
+            style={[styles.fab, { backgroundColor: '#8d6e63' }]} 
+            onPress={() => setScreen('AddMenu')}
+          >
+            <Text style={styles.fabText}>+ Add Item</Text>
           </TouchableOpacity>
         </View>
       )}
