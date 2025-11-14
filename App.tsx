@@ -4,11 +4,10 @@ import {SafeAreaView, View, Text, TextInput, TouchableOpacity, FlatList, ScrollV
 
 const { width } = Dimensions.get('window');
 
-
 const styles = StyleSheet.create({
   container: { 
     flex: 1, 
-    backgroundColor: '#fefaf5', // Warm cream background
+    backgroundColor: '#fefaf5',
     paddingBottom: 60
   },
   header: {
@@ -17,8 +16,8 @@ const styles = StyleSheet.create({
     textAlign: 'center', 
     marginBottom: 20, 
     marginTop: 20,
-    color: '#5d4037', // Deep brown
-    fontFamily: 'System', // Will use system font
+    color: '#5d4037',
+    fontFamily: 'System',
     letterSpacing: -0.5,
   },
   menuCard: {
@@ -28,8 +27,7 @@ const styles = StyleSheet.create({
     margin: 6,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: '#e8d5c4', // Light brown border
-    // Enhanced shadow
+    borderColor: '#e8d5c4',
     shadowColor: '#5d4037',
     shadowOffset: {
       width: 0,
@@ -44,7 +42,6 @@ const styles = StyleSheet.create({
     height: 130, 
     borderRadius: 10, 
     marginBottom: 10,
-    // Image shadow
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -62,7 +59,6 @@ const styles = StyleSheet.create({
     height: 120, 
     borderRadius: 12, 
     marginBottom: 8,
-    // Enhanced shadow for deal images
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -75,12 +71,12 @@ const styles = StyleSheet.create({
   itemName: {
     fontWeight: '700', 
     fontSize: 16,
-    color: '#4e342e', // Dark brown
+    color: '#4e342e',
     marginBottom: 4,
   },
   itemDescription: {
     fontSize: 13, 
-    color: '#8d6e63', // Medium brown
+    color: '#8d6e63',
     lineHeight: 16,
     marginBottom: 6,
   },
@@ -88,21 +84,20 @@ const styles = StyleSheet.create({
     marginTop: 4, 
     fontWeight: '700',
     fontSize: 15,
-    color: '#d7ccc8', // Light brown
+    color: '#d7ccc8',
   },
   screen: {
     flex: 1,
     paddingTop: 16,
-    backgroundColor: '#fefaf5', // Warm cream
+    backgroundColor: '#fefaf5',
   },
   screenHeader: {
     fontSize: 24,
     fontWeight: '800',
     paddingHorizontal: 16,
     paddingVertical: 12,
-    color: '#5d4037', // Deep brown
+    color: '#5d4037',
     backgroundColor: '#fff',
-    // Header shadow
     shadowColor: '#5d4037',
     shadowOffset: {
       width: 0,
@@ -120,7 +115,6 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     borderWidth: 1,
     borderColor: '#e8d5c4',
-    // Enhanced card shadow
     shadowColor: '#5d4037',
     shadowOffset: {
       width: 0,
@@ -132,15 +126,14 @@ const styles = StyleSheet.create({
   },
   input: {
     borderWidth: 1.5,
-    borderColor: '#d7ccc8', // Light brown border
+    borderColor: '#d7ccc8',
     paddingHorizontal: 14,
     paddingVertical: 10,
     borderRadius: 8,
     marginTop: 8,
-    backgroundColor: '#faf4ed', // Very light warm background
+    backgroundColor: '#faf4ed',
     fontSize: 15,
     color: '#5d4037',
-    // Input shadow
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -150,12 +143,11 @@ const styles = StyleSheet.create({
     shadowRadius: 2,
   },
   primaryButton: {
-    backgroundColor: '#6d4c41', // Rich brown
+    backgroundColor: '#6d4c41',
     padding: 14,
     borderRadius: 8,
     alignItems: 'center',
     marginTop: 16,
-    // Button shadow
     shadowColor: '#4e342e',
     shadowOffset: {
       width: 0,
@@ -177,7 +169,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: 8,
     borderWidth: 1.5,
-    borderColor: '#a1887f', // Medium brown border
+    borderColor: '#a1887f',
     backgroundColor: '#fff',
   },
   ghostButtonText: {
@@ -196,7 +188,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     paddingVertical: 12,
-    // Nav shadow
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -221,11 +212,10 @@ const styles = StyleSheet.create({
     position: 'absolute',
     right: 20,
     bottom: 80,
-    backgroundColor: '#8d6e63', // Warm medium brown
+    backgroundColor: '#8d6e63',
     paddingHorizontal: 18,
     paddingVertical: 14,
     borderRadius: 28,
-    // FAB shadow
     shadowColor: '#4e342e',
     shadowOffset: {
       width: 0,
@@ -249,7 +239,6 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     borderWidth: 1,
     borderColor: '#e8d5c4',
-    // Info card shadow
     shadowColor: '#5d4037',
     shadowOffset: {
       width: 0,
@@ -279,7 +268,6 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     marginRight: 8,
     backgroundColor: '#fff',
-    // Filter button shadow
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -289,7 +277,7 @@ const styles = StyleSheet.create({
     shadowRadius: 2,
   },
   filterBtnActive: {
-    backgroundColor: '#efebe9', // Very light brown
+    backgroundColor: '#efebe9',
     borderColor: '#8d6e63',
   },
   avgRow: {
@@ -304,7 +292,6 @@ const styles = StyleSheet.create({
     height: 110,
     borderRadius: 8,
     marginBottom: 10,
-    // Enhanced menu image shadow
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -321,7 +308,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginVertical: 6,
     backgroundColor: '#fff',
-    // Secondary button shadow
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -338,7 +324,6 @@ const styles = StyleSheet.create({
     marginHorizontal: 8,
     marginVertical: 2,
     borderRadius: 8,
-    // List item shadow
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -356,7 +341,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     marginBottom: 6,
     borderRadius: 10,
-    // Menu row shadow
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -381,6 +365,29 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     marginBottom: 16,
   },
+  tabContainer: {
+    flexDirection: 'row',
+    paddingHorizontal: 16,
+    marginBottom: 16,
+  },
+  tabButton: {
+    flex: 1,
+    paddingVertical: 12,
+    alignItems: 'center',
+    borderBottomWidth: 3,
+    borderBottomColor: 'transparent',
+  },
+  tabButtonActive: {
+    borderBottomColor: '#6d4c41',
+  },
+  tabButtonText: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#8d6e63',
+  },
+  tabButtonTextActive: {
+    color: '#5d4037',
+  },
 });
 
 // ---------- Types ----------
@@ -395,7 +402,15 @@ type MenuItem = {
   image: string;
 };
 
-type Screen = 'Login' | 'Home' | 'Search' | 'Personal' | 'Contact' | 'Deals' | 'Payment' | 'Change' | 'AddMenu' | 'EditMenu';
+type DealItem = {
+  id: string;
+  menuItemId: string;
+  previousPrice: number;
+  newPrice: number;
+  isActive: boolean;
+};
+
+type Screen = 'Login' | 'Home' | 'Search' | 'Personal' | 'Contact' | 'Deals' | 'Payment' | 'Change' | 'AddMenu' | 'EditMenu' | 'DealManagement' | 'Manage';
 
 // ---------- Helpers ----------
 const uid = () => Math.random().toString(36).slice(2, 9);
@@ -423,34 +438,535 @@ function NavButton({ label, onPress }: {label: string; onPress: () => void}){
   );
 }
 
-// Deals Screen - SHOWS ALL ITEMS WITH FILTERING
-function DealsScreen({ menuItems, filter, onBack }: { menuItems: MenuItem[]; filter: Course | 'All'; onBack: () => void }) {
-  const filtered = filter === 'All' ? menuItems : menuItems.filter(m => m.course === filter);
+// New Manage Screen with Tabs
+function ManageScreen({
+  menuItems,
+  dealItems,
+  onUpdateDeals,
+  onEditItem,
+  onRemoveItem,
+  onOpenScreen,
+  onBack,
+}: {
+  menuItems: MenuItem[];
+  dealItems: DealItem[];
+  onUpdateDeals: (deals: DealItem[]) => void;
+  onEditItem: (item: MenuItem) => void;
+  onRemoveItem: (id: string) => void;
+  onOpenScreen: (screen: Screen) => void;
+  onBack: () => void;
+}) {
+  const [activeTab, setActiveTab] = useState<'menu' | 'deals'>('menu');
 
   return (
     <View style={styles.screen}>
-      <Text style={styles.screenHeader}>Deals{filter !== 'All' ? ` — ${filter}` : ''}</Text>
-      <ScrollView style={{ flex: 1, paddingHorizontal: 12 }} contentContainerStyle={{ paddingBottom: 20 }}>
-        <View style={{ flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between' }}>
-          {filtered.map(item => (
-            <View key={item.id} style={styles.menuCard}>
-              <Image source={{ uri: item.image }} style={styles.menuImage} resizeMode="cover" />
-              <View style={styles.cardContent}>
-                <Text style={{ fontWeight: '700', fontSize: 14 }}>{item.name}</Text>
-                <Text style={styles.cardDescription}>{item.description}</Text>
-                <Text style={{ color: '#666', fontSize: 12 }}>{item.course} • ${item.price}</Text>
+      <Text style={styles.screenHeader}>Manage Restaurant</Text>
+
+      {/* Tabs */}
+      <View style={styles.tabContainer}>
+        <TouchableOpacity
+          style={[styles.tabButton, activeTab === 'menu' && styles.tabButtonActive]}
+          onPress={() => setActiveTab('menu')}
+        >
+          <Text style={[styles.tabButtonText, activeTab === 'menu' && styles.tabButtonTextActive]}>
+            Menu Items ({menuItems.length})
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={[styles.tabButton, activeTab === 'deals' && styles.tabButtonActive]}
+          onPress={() => setActiveTab('deals')}
+        >
+          <Text style={[styles.tabButtonText, activeTab === 'deals' && styles.tabButtonTextActive]}>
+            Deals ({dealItems.filter(d => d.isActive).length})
+          </Text>
+        </TouchableOpacity>
+      </View>
+
+      {activeTab === 'menu' ? (
+        <MenuManagementTab
+          menuItems={menuItems}
+          onEditItem={onEditItem}
+          onRemoveItem={onRemoveItem}
+          onOpenScreen={onOpenScreen}
+        />
+      ) : (
+        <DealsManagementTab
+          menuItems={menuItems}
+          dealItems={dealItems}
+          onUpdateDeals={onUpdateDeals}
+        />
+      )}
+
+      <TouchableOpacity style={[styles.ghostButton, { margin: 12 }]} onPress={onBack}>
+        <Text style={styles.ghostButtonText}>Back to Home</Text>
+      </TouchableOpacity>
+    </View>
+  );
+}
+
+// Menu Management Tab
+function MenuManagementTab({
+  menuItems,
+  onEditItem,
+  onRemoveItem,
+  onOpenScreen,
+}: {
+  menuItems: MenuItem[];
+  onEditItem: (item: MenuItem) => void;
+  onRemoveItem: (id: string) => void;
+  onOpenScreen: (screen: Screen) => void;
+}) {
+  return (
+    <View style={{ flex: 1 }}>
+      <View style={{ paddingHorizontal: 16, marginBottom: 12 }}>
+        <TouchableOpacity 
+          style={styles.primaryButton}
+          onPress={() => onOpenScreen('AddMenu')}
+        >
+          <Text style={styles.primaryButtonText}>+ Add New Menu Item</Text>
+        </TouchableOpacity>
+      </View>
+
+      <ScrollView style={{ flex: 1 }}>
+        {menuItems.map(item => (
+          <View key={item.id} style={styles.menuRow}>
+            <View style={{ flexDirection: 'row', alignItems: 'center', flex: 1 }}>
+              <Image 
+                source={{ uri: item.image }} 
+                style={{ width: 60, height: 60, borderRadius: 6, marginRight: 12 }} 
+              />
+              <View style={{ flex: 1 }}>
+                <Text style={{ fontWeight: '700', fontSize: 16 }}>{item.name}</Text>
+                <Text style={{ color: '#8d6e63', fontSize: 12 }}>{item.course}</Text>
+                <Text style={{ color: '#5d4037', fontWeight: '600' }}>${item.price}</Text>
+                <Text style={{ color: '#666', fontSize: 11, marginTop: 2 }} numberOfLines={2}>
+                  {item.description}
+                </Text>
               </View>
             </View>
-          ))}
-          {filtered.length === 0 && (
-            <View style={{ padding: 12, width: '100%' }}>
-              <Text>No items found for this filter.</Text>
+            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+              <TouchableOpacity 
+                style={[styles.secondaryButton, { marginRight: 8, paddingHorizontal: 8 }]} 
+                onPress={() => onEditItem(item)}
+              >
+                <Text style={{ color: '#2a9d8f', fontWeight: '700', fontSize: 12 }}>Edit</Text>
+              </TouchableOpacity>
+              <TouchableOpacity 
+                style={[styles.secondaryButton, { paddingHorizontal: 8 }]} 
+                onPress={() => onRemoveItem(item.id)}
+              >
+                <Text style={{ color: '#e76f51', fontWeight: '700', fontSize: 12 }}>Remove</Text>
+              </TouchableOpacity>
             </View>
-          )}
-        </View>
+          </View>
+        ))}
+        
+        {menuItems.length === 0 && (
+          <View style={{ padding: 40, alignItems: 'center' }}>
+            <Text style={{ color: '#8d6e63', textAlign: 'center', marginBottom: 16 }}>
+              No menu items yet.{'\n'}Add your first menu item to get started!
+            </Text>
+            <TouchableOpacity 
+              style={styles.primaryButton}
+              onPress={() => onOpenScreen('AddMenu')}
+            >
+              <Text style={styles.primaryButtonText}>Add First Item</Text>
+            </TouchableOpacity>
+          </View>
+        )}
       </ScrollView>
+    </View>
+  );
+}
+
+// Deals Management Tab
+function DealsManagementTab({
+  menuItems,
+  dealItems,
+  onUpdateDeals,
+}: {
+  menuItems: MenuItem[];
+  dealItems: DealItem[];
+  onUpdateDeals: (deals: DealItem[]) => void;
+}) {
+  const [selectedItems, setSelectedItems] = useState<DealItem[]>(dealItems);
+
+  const toggleItemSelection = (menuItem: MenuItem) => {
+    setSelectedItems(prev => {
+      const existingIndex = prev.findIndex(item => item.menuItemId === menuItem.id);
+      
+      if (existingIndex >= 0) {
+        return prev.filter(item => item.menuItemId !== menuItem.id);
+      } else {
+        const newDeal: DealItem = {
+          id: uuidv4(),
+          menuItemId: menuItem.id,
+          previousPrice: menuItem.price,
+          newPrice: Math.max(1, Math.floor(menuItem.price * 0.8)),
+          isActive: true,
+        };
+        return [...prev, newDeal];
+      }
+    });
+  };
+
+  const updateDealPrice = (menuItemId: string, field: 'previousPrice' | 'newPrice', value: string) => {
+    const numValue = parseFloat(value) || 0;
+    setSelectedItems(prev =>
+      prev.map(item =>
+        item.menuItemId === menuItemId ? { ...item, [field]: numValue } : item
+      )
+    );
+  };
+
+  const saveDeals = () => {
+    onUpdateDeals(selectedItems);
+    Alert.alert('Success', 'Deals have been updated successfully!');
+  };
+
+  const isItemSelected = (menuItemId: string) => {
+    return selectedItems.some(item => item.menuItemId === menuItemId);
+  };
+
+  const getDealForItem = (menuItemId: string) => {
+    return selectedItems.find(item => item.menuItemId === menuItemId);
+  };
+
+  return (
+    <View style={{ flex: 1 }}>
+      <View style={styles.formCard}>
+        <Text style={{ 
+          fontSize: 16, 
+          color: '#5d4037', 
+          marginBottom: 16, 
+          lineHeight: 22,
+          textAlign: 'center'
+        }}>
+          Select menu items to feature on the deals page and set their special prices.
+        </Text>
+
+        <FlatList
+          data={menuItems}
+          style={{ maxHeight: 500 }}
+          keyExtractor={item => item.id}
+          renderItem={({ item }) => {
+            const isSelected = isItemSelected(item.id);
+            const deal = getDealForItem(item.id);
+            
+            return (
+              <View style={[
+                styles.listItem, 
+                { 
+                  backgroundColor: isSelected ? '#f0f7ff' : '#fff',
+                  borderLeftWidth: 4,
+                  borderLeftColor: isSelected ? '#4a6fa5' : 'transparent'
+                }
+              ]}>
+                <TouchableOpacity 
+                  onPress={() => toggleItemSelection(item)}
+                  style={{ flexDirection: 'row', alignItems: 'center', flex: 1 }}
+                >
+                  <Image 
+                    source={{ uri: item.image }} 
+                    style={{ width: 60, height: 60, borderRadius: 6, marginRight: 12 }} 
+                  />
+                  <View style={{ flex: 1 }}>
+                    <Text style={{ fontWeight: '700', color: '#5d4037' }}>{item.name}</Text>
+                    <Text style={{ color: '#8d6e63', fontSize: 12 }}>{item.course}</Text>
+                    <Text style={{ color: '#666', fontSize: 12, marginTop: 2 }}>
+                      Current Price: ${item.price}
+                    </Text>
+                  </View>
+                  <View style={{
+                    width: 20,
+                    height: 20,
+                    borderRadius: 10,
+                    borderWidth: 2,
+                    borderColor: isSelected ? '#4a6fa5' : '#ccc',
+                    backgroundColor: isSelected ? '#4a6fa5' : 'transparent',
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                  }}>
+                    {isSelected && (
+                      <Text style={{ color: 'white', fontSize: 12, fontWeight: 'bold' }}>✓</Text>
+                    )}
+                  </View>
+                </TouchableOpacity>
+
+                {isSelected && deal && (
+                  <View style={{ 
+                    marginTop: 12, 
+                    padding: 12, 
+                    backgroundColor: '#fff', 
+                    borderRadius: 8,
+                    borderWidth: 1,
+                    borderColor: '#e8d5c4'
+                  }}>
+                    <Text style={{ fontWeight: '600', marginBottom: 8, color: '#5d4037' }}>
+                      Set Deal Prices:
+                    </Text>
+                    
+                    <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                      <View style={{ flex: 1, marginRight: 8 }}>
+                        <Text style={{ fontSize: 12, color: '#8d6e63', marginBottom: 4 }}>
+                          Previous Price
+                        </Text>
+                        <TextInput
+                          value={deal.previousPrice.toString()}
+                          onChangeText={(value) => updateDealPrice(item.id, 'previousPrice', value)}
+                          style={[styles.input, { textAlign: 'center' }]}
+                          keyboardType="decimal-pad"
+                          placeholder="Previous price"
+                        />
+                      </View>
+                      
+                      <View style={{ flex: 1, marginLeft: 8 }}>
+                        <Text style={{ fontSize: 12, color: '#8d6e63', marginBottom: 4 }}>
+                          New Price
+                        </Text>
+                        <TextInput
+                          value={deal.newPrice.toString()}
+                          onChangeText={(value) => updateDealPrice(item.id, 'newPrice', value)}
+                          style={[styles.input, { 
+                            textAlign: 'center',
+                            borderColor: deal.newPrice < deal.previousPrice ? '#28a745' : '#ff6b6b'
+                          }]}
+                          keyboardType="decimal-pad"
+                          placeholder="Deal price"
+                        />
+                      </View>
+                    </View>
+
+                    {deal.newPrice < deal.previousPrice && (
+                      <Text style={{ 
+                        fontSize: 12, 
+                        color: '#28a745', 
+                        textAlign: 'center',
+                        marginTop: 6,
+                        fontWeight: '600'
+                      }}>
+                        Save ${(deal.previousPrice - deal.newPrice).toFixed(2)}!
+                      </Text>
+                    )}
+                  </View>
+                )}
+              </View>
+            );
+          }}
+        />
+
+        <View style={{ marginTop: 20, padding: 16, backgroundColor: '#f8f9fa', borderRadius: 8 }}>
+          <Text style={{ fontWeight: '600', color: '#5d4037', marginBottom: 8 }}>
+            📊 Deal Summary
+          </Text>
+          <Text style={{ fontSize: 14, color: '#8d6e63' }}>
+            • {selectedItems.length} item(s) selected for deals{'\n'}
+            • {selectedItems.filter(item => item.newPrice < item.previousPrice).length} item(s) with discounts
+          </Text>
+        </View>
+
+        <TouchableOpacity 
+          style={[styles.primaryButton, { marginTop: 16 }]} 
+          onPress={saveDeals}
+        >
+          <Text style={styles.primaryButtonText}>Save Deals</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
+}
+
+// Deal Management Screen (Standalone - kept for backward compatibility)
+function DealManagementScreen({
+  menuItems,
+  dealItems,
+  onUpdateDeals,
+  onBack,
+}: {
+  menuItems: MenuItem[];
+  dealItems: DealItem[];
+  onUpdateDeals: (deals: DealItem[]) => void;
+  onBack: () => void;
+}) {
+  return (
+    <View style={styles.screen}>
+      <Text style={styles.screenHeader}>Manage Deals</Text>
+      <DealsManagementTab
+        menuItems={menuItems}
+        dealItems={dealItems}
+        onUpdateDeals={onUpdateDeals}
+      />
       <TouchableOpacity style={[styles.ghostButton, { margin: 12 }]} onPress={onBack}>
         <Text style={styles.ghostButtonText}>Back</Text>
+      </TouchableOpacity>
+    </View>
+  );
+}
+
+// Deals Screen - SHOWS DEAL ITEMS WITH DISCOUNTS
+function DealsScreen({ 
+  menuItems, 
+  dealItems, 
+  filter, 
+  onBack 
+}: { 
+  menuItems: MenuItem[]; 
+  dealItems: DealItem[];
+  filter: Course | 'All'; 
+  onBack: () => void; 
+}) {
+  const activeDeals = dealItems
+    .filter(deal => deal.isActive)
+    .map(deal => {
+      const menuItem = menuItems.find(item => item.id === deal.menuItemId);
+      return menuItem ? { ...menuItem, deal } : null;
+    })
+    .filter(Boolean) as (MenuItem & { deal: DealItem })[];
+
+  const filtered = filter === 'All' 
+    ? activeDeals 
+    : activeDeals.filter(item => item.course === filter);
+
+  const hasDiscounts = activeDeals.some(item => item.deal.newPrice < item.deal.previousPrice);
+
+  return (
+    <View style={styles.screen}>
+      <Text style={styles.screenHeader}>
+        Special Deals{filter !== 'All' ? ` — ${filter}` : ''}
+      </Text>
+
+      {hasDiscounts && (
+        <View style={{
+          backgroundColor: '#fff3cd',
+          padding: 12,
+          marginHorizontal: 16,
+          marginBottom: 16,
+          borderRadius: 8,
+          borderLeftWidth: 4,
+          borderLeftColor: '#ffc107'
+        }}>
+          <Text style={{ color: '#856404', fontSize: 14, fontWeight: '600', textAlign: 'center' }}>
+            🎉 Limited Time Offers - Save on Your Favorites!
+          </Text>
+        </View>
+      )}
+
+      <ScrollView style={{ flex: 1, paddingHorizontal: 12 }} contentContainerStyle={{ paddingBottom: 20 }}>
+        {filtered.length === 0 ? (
+          <View style={{ 
+            padding: 40, 
+            alignItems: 'center',
+            backgroundColor: '#fff',
+            margin: 16,
+            borderRadius: 12
+          }}>
+            <Text style={{ 
+              fontSize: 16, 
+              color: '#8d6e63', 
+              textAlign: 'center',
+              marginBottom: 8
+            }}>
+              {activeDeals.length === 0 ? 'No deals available' : 'No deals found for this filter'}
+            </Text>
+            <Text style={{ 
+              fontSize: 14, 
+              color: '#a1887f', 
+              textAlign: 'center' 
+            }}>
+              {activeDeals.length === 0 
+                ? 'Check back later for special offers!' 
+                : 'Try selecting a different filter'
+              }
+            </Text>
+          </View>
+        ) : (
+          <View style={{ flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between' }}>
+            {filtered.map(item => (
+              <View key={item.id} style={[
+                styles.menuCard,
+                { 
+                  borderColor: item.deal.newPrice < item.deal.previousPrice ? '#ff6b6b' : '#e8d5c4',
+                  borderWidth: item.deal.newPrice < item.deal.previousPrice ? 2 : 1
+                }
+              ]}>
+                {item.deal.newPrice < item.deal.previousPrice && (
+                  <View style={{
+                    position: 'absolute',
+                    top: 8,
+                    right: 8,
+                    backgroundColor: '#ff6b6b',
+                    paddingHorizontal: 8,
+                    paddingVertical: 4,
+                    borderRadius: 12,
+                    zIndex: 1
+                  }}>
+                    <Text style={{ color: 'white', fontSize: 10, fontWeight: '700' }}>
+                      SALE
+                    </Text>
+                  </View>
+                )}
+                
+                <Image source={{ uri: item.image }} style={styles.menuImage} resizeMode="cover" />
+                <View style={styles.cardContent}>
+                  <Text style={{ fontWeight: '700', fontSize: 14, color: '#5d4037' }}>
+                    {item.name}
+                  </Text>
+                  <Text style={styles.cardDescription}>{item.description}</Text>
+                  
+                  <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 4 }}>
+                    {item.deal.newPrice < item.deal.previousPrice ? (
+                      <>
+                        <Text style={{
+                          fontSize: 13,
+                          color: '#8d6e63',
+                          textDecorationLine: 'line-through',
+                          marginRight: 8
+                        }}>
+                          ${item.deal.previousPrice}
+                        </Text>
+                        <Text style={{
+                          fontSize: 16,
+                          fontWeight: '700',
+                          color: '#ff6b6b'
+                        }}>
+                          ${item.deal.newPrice}
+                        </Text>
+                        <Text style={{
+                          fontSize: 10,
+                          color: '#28a745',
+                          marginLeft: 8,
+                          fontWeight: '600'
+                        }}>
+                          Save ${(item.deal.previousPrice - item.deal.newPrice).toFixed(2)}
+                        </Text>
+                      </>
+                    ) : (
+                      <Text style={{
+                        fontSize: 16,
+                        fontWeight: '700',
+                        color: '#5d4037'
+                      }}>
+                        ${item.deal.newPrice}
+                      </Text>
+                    )}
+                  </View>
+                  
+                  <Text style={{ 
+                    color: '#8d6e63', 
+                    fontSize: 11, 
+                    marginTop: 4 
+                  }}>
+                    {item.course}
+                  </Text>
+                </View>
+              </View>
+            ))}
+          </View>
+        )}
+      </ScrollView>
+      
+      <TouchableOpacity style={[styles.ghostButton, { margin: 12 }]} onPress={onBack}>
+        <Text style={styles.ghostButtonText}>Back to Menu</Text>
       </TouchableOpacity>
     </View>
   );
@@ -466,6 +982,7 @@ function HomeScreen({
   currentFilter,
   isAdmin,
   onAddToPersonalMenu,
+  dealItemsCount,
 }: {
   menuItems: MenuItem[];
   totalCount: number;
@@ -475,6 +992,7 @@ function HomeScreen({
   currentFilter: Course | 'All';
   isAdmin: boolean;
   onAddToPersonalMenu: (item: MenuItem) => void;
+  dealItemsCount: number;
 }) {
   const avgAll = menuItems.length
     ? +(menuItems.reduce((s, m) => s + m.price, 0) / menuItems.length).toFixed(2)
@@ -494,6 +1012,10 @@ function HomeScreen({
         <View style={styles.infoCard}>
           <Text style={styles.infoTitle}>Avg price</Text>
           <Text style={styles.infoValue}>${avgAll}</Text>
+        </View>
+        <View style={styles.infoCard}>
+          <Text style={styles.infoTitle}>Active deals</Text>
+          <Text style={styles.infoValue}>{dealItemsCount}</Text>
         </View>
       </View>
 
@@ -550,14 +1072,14 @@ function HomeScreen({
               <Text style={styles.primaryButtonText}>Search menu</Text>
             </TouchableOpacity>
             <TouchableOpacity style={[styles.ghostButton, { marginTop: 8 }]} onPress={() => onOpenScreen('Deals')}>
-              <Text style={styles.ghostButtonText}>View deals</Text>
+              <Text style={styles.ghostButtonText}>View deals ({dealItemsCount})</Text>
             </TouchableOpacity>
             <TouchableOpacity style={[styles.ghostButton, { marginTop: 8 }]} onPress={() => onOpenScreen('Contact')}>
               <Text style={styles.ghostButtonText}>Contact</Text>
             </TouchableOpacity>
             {isAdmin && (
-              <TouchableOpacity style={[styles.ghostButton, { marginTop: 8 }]} onPress={() => onOpenScreen('Change')}>
-                <Text style={styles.ghostButtonText}>Manage menu</Text>
+              <TouchableOpacity style={[styles.ghostButton, { marginTop: 8 }]} onPress={() => onOpenScreen('Manage')}>
+                <Text style={styles.ghostButtonText}>Manage Restaurant</Text>
               </TouchableOpacity>
             )}
           </View>
@@ -580,13 +1102,10 @@ function SearchScreen({
   const [query, setQuery] = useState('');
   const [searchFilter, setSearchFilter] = useState<Course | 'All'>('All');
 
-  // Combined search and filter - shows all items when no search query
   const filtered = menuItems.filter(m => {
     if (query === '') {
-      // When no search query, show all items that match the filter
       return searchFilter === 'All' || m.course === searchFilter;
     } else {
-      // When there's a search query, filter by both search and course
       const matchesSearch = m.name.toLowerCase().includes(query.toLowerCase()) ||
                            m.description.toLowerCase().includes(query.toLowerCase());
       const matchesFilter = searchFilter === 'All' || m.course === searchFilter;
@@ -820,7 +1339,6 @@ function ContactScreen({ onBack }: { onBack: () => void }) {
 
     setIsSending(true);
     
-    // Simulate sending message (in a real app, this would call an API)
     setTimeout(() => {
       setIsSending(false);
       Alert.alert(
@@ -830,7 +1348,6 @@ function ContactScreen({ onBack }: { onBack: () => void }) {
           {
             text: 'OK',
             onPress: () => {
-              // Clear the form
               setName('');
               setEmail('');
               setMessage('');
@@ -864,7 +1381,6 @@ function ContactScreen({ onBack }: { onBack: () => void }) {
             Have questions, feedback, or special requests? Send a message directly to our chef!
           </Text>
 
-          {/* Contact Information */}
           <View style={{ 
             backgroundColor: '#faf4ed', 
             padding: 16, 
@@ -887,7 +1403,6 @@ function ContactScreen({ onBack }: { onBack: () => void }) {
             </Text>
           </View>
 
-          {/* Message Form */}
           <Text style={{ 
             fontWeight: '700', 
             color: '#5d4037', 
@@ -938,7 +1453,6 @@ function ContactScreen({ onBack }: { onBack: () => void }) {
             * Required fields. We typically respond within 24 hours.
           </Text>
 
-          {/* Action Buttons */}
           <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
             <TouchableOpacity 
               style={[styles.ghostButton, { flex: 1, marginRight: 8 }]} 
@@ -965,7 +1479,6 @@ function ContactScreen({ onBack }: { onBack: () => void }) {
             </TouchableOpacity>
           </View>
 
-          {/* Quick Responses */}
           <View style={{ marginTop: 20, padding: 16, backgroundColor: '#f8f9fa', borderRadius: 8 }}>
             <Text style={{ fontWeight: '600', color: '#5d4037', marginBottom: 8 }}>
               💡 Quick Message Ideas:
@@ -1005,7 +1518,6 @@ function PaymentScreen({ onBack, onPaySuccess }: { onBack: () => void; onPaySucc
       Alert.alert('Missing info', 'Please fill in all payment fields.');
       return;
     }
-    // In a real app you would process payment here.
     onPaySuccess();
   };
 
@@ -1050,7 +1562,6 @@ function PaymentScreen({ onBack, onPaySuccess }: { onBack: () => void; onPaySucc
 }
 
 // Add Menu Screen - simple form to add a new menu item
-// Add Menu Screen - simple form to add a new menu item
 function AddMenuScreen({
   onAdd,
   onCancel,
@@ -1065,7 +1576,6 @@ function AddMenuScreen({
   const [image, setImage] = useState('');
 
   const handleAdd = () => {
-    // Simple validation - just check for name and valid price
     if (!name.trim()) {
       Alert.alert('Missing Name', 'Please enter a name for the menu item.');
       return;
@@ -1087,7 +1597,6 @@ function AddMenuScreen({
     
     onAdd(newItem);
     
-    // Clear the form
     setName('');
     setDescription('');
     setPrice('');
@@ -1191,7 +1700,6 @@ function EditMenuScreen({
   const [price, setPrice] = useState(String(item.price));
   const [image, setImage] = useState(item.image);
 
-  // keep fields in sync if the item prop changes while mounted
   React.useEffect(() => {
     setName(item.name);
     setDescription(item.description);
@@ -1295,43 +1803,35 @@ export default function App() {
   const [username, setUsername] = useState('');
   const [isAdmin, setIsAdmin] = useState(false);
 
-  // Menu items state - ALL WITH WORKING IMAGE LINKS
+  // Menu items state
   const [menuItems, setMenuItems] = useState<MenuItem[]>([
-    // 🌿 Starters - Working food images
-    { id: uuidv4(), name: 'Tomato Bruschetta', description: 'Toasted sourdough topped with marinated cherry tomatoes and basil.', course: 'Starter', price: 45, image: 'https://images.unsplash.com/photo-1572695157363-4a7d7f4c12d5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3' },
-    { id: uuidv4(), name: 'Avocado Toast', description: 'Creamy smashed avocado on seeded bread with lemon drizzle.', course: 'Starter', price: 55, image: 'https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3' },
-    { id: uuidv4(), name: 'Caprese Salad', description: 'Fresh mozzarella, ripe tomatoes, and basil with olive oil.', course: 'Starter', price: 60, image: 'https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3' },
+    // 🌿 Starters
+    { id: uuidv4(), name: 'Tomato Bruschetta', description: 'Toasted sourdough topped with marinated cherry tomatoes and basil.', course: 'Starter', price: 45, image: 'https://i.pinimg.com/1200x/ad/d5/93/add593c77532d55b43038159365aa603.jpg' },
+    { id: uuidv4(), name: 'Avocado Toast', description: 'Creamy smashed avocado on seeded bread with lemon drizzle.', course: 'Starter', price: 55, image: 'https://i.pinimg.com/1200x/2b/c5/4a/2bc54ab609fc9d71785c17a39fb2587e.jpg' },
+    { id: uuidv4(), name: 'Caprese Salad', description: 'Fresh mozzarella, ripe tomatoes, and basil with olive oil.', course: 'Starter', price: 60, image: 'https://i.pinimg.com/736x/ba/0c/cb/ba0ccb0f4c90126eb737963fd172c894.jpg' },
 
-    // 🍝 Mains - Working food images
-    { id: uuidv4(), name: 'Creamy Mushroom Pasta', description: 'Penne in rich garlic mushroom sauce.', course: 'Main', price: 85, image: 'https://images.unsplash.com/photo-1551892374-ecf8754cf8b0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3' },
-    { id: uuidv4(), name: 'Grilled Salmon', description: 'Lemon butter salmon with roasted vegetables.', course: 'Main', price: 120, image: 'https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3' },
-    { id: uuidv4(), name: 'Beef Steak', description: 'Juicy sirloin steak with creamy mash and herbs.', course: 'Main', price: 150, image: 'https://images.unsplash.com/photo-1600891964092-4314c7888b63?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3' },
-    { id: uuidv4(), name: 'Vegan Buddha Bowl', description: 'Quinoa, roasted chickpeas, avocado, and tahini dressing.', course: 'Main', price: 95, image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3' },
+    // 🍝 Mains
+    { id: uuidv4(), name: 'Creamy Mushroom Pasta and chicken', description: 'Penne in rich garlic mushroom sauce with grilled chicken on the side.', course: 'Main', price: 85, image: 'https://i.pinimg.com/1200x/d0/66/a3/d066a3fdfb8cd7d70689a9ec40e86ffb.jpg' },
+    { id: uuidv4(), name: 'Grilled Salmon', description: 'Lemon butter salmon with roasted vegetables.', course: 'Main', price: 120, image: 'https://i.pinimg.com/736x/de/9c/1b/de9c1b6d21cbeb650e486b9f5010103f.jpg' },
+    { id: uuidv4(), name: 'Beef Steak', description: 'Juicy sirloin steak with creamy mash and herbs.', course: 'Main', price: 150, image: 'https://i.pinimg.com/736x/ad/51/45/ad5145a14109d6e410c503b377466392.jpg' },
+    { id: uuidv4(), name: 'Vegan Buddha Bowl', description: 'Quinoa, roasted chickpeas, avocado, and tahini dressing.', course: 'Main', price: 95, image: 'https://i.pinimg.com/736x/ad/a5/71/ada571b95c086f59f987d64115acfb97.jpg' },
 
-    // 🍰 Desserts - Working food images
-    { id: uuidv4(), name: 'Chocolate Mousse', description: 'Light and airy cocoa mousse with cream topping.', course: 'Dessert', price: 40, image: 'https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3' },
-    { id: uuidv4(), name: 'Cheesecake Slice', description: 'Classic creamy cheesecake with berry sauce.', course: 'Dessert', price: 50, image: 'https://images.unsplash.com/photo-1567306301408-9b74779a11af?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3' },
-    { id: uuidv4(), name: 'Brownie Sundae', description: 'Warm chocolate brownie with ice cream.', course: 'Dessert', price: 60, image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3' },
+    // 🍰 Desserts
+    { id: uuidv4(), name: 'Chocolate Mousse', description: 'Light and airy cocoa mousse with cream topping.', course: 'Dessert', price: 40, image: 'https://i.pinimg.com/1200x/d8/b6/f9/d8b6f9e951905047935ce9bfa30bcfc2.jpg' },
+    { id: uuidv4(), name: 'Cheesecake Slice', description: 'Classic creamy cheesecake with berryies.', course: 'Dessert', price: 50, image: 'https://i.pinimg.com/736x/68/b3/e2/68b3e222556a926e971bd2b22eac2cad.jpg' },
+    { id: uuidv4(), name: 'Brownie Sundae', description: 'Warm chocolate brownie with ice cream.', course: 'Dessert', price: 60, image: 'https://i.pinimg.com/736x/41/57/ba/4157baa7bfc1eff9705fa9e64e1caec3.jpg' },
 
-    // ☕ Drinks - Working drink images
-    { id: uuidv4(), name: 'Iced Coffee', description: 'Cold brew with a splash of milk and ice.', course: 'Drink', price: 35, image: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3' },
-    { id: uuidv4(), name: 'Berry Smoothie', description: 'Mixed berries, banana, and yogurt smoothie.', course: 'Drink', price: 45, image: 'https://images.unsplash.com/photo-1570194065650-74c6c17fcfa7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3' },
-    { id: uuidv4(), name: 'Matcha Latte', description: 'Japanese green tea latte with almond milk.', course: 'Drink', price: 40, image: 'https://images.unsplash.com/photo-1515823064-d6e0c04616a7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3' },
-    { id: uuidv4(), name: 'Fresh Lemonade', description: 'Sparkling homemade lemonade with mint leaves.', course: 'Drink', price: 30, image: 'https://images.unsplash.com/photo-1523371683702-309cffa2e52f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3' },
+    // ☕ Drinks
+    { id: uuidv4(), name: 'Iced Coffee', description: 'Cold brew with a splash of milk and ice.', course: 'Drink', price: 35, image: 'https://i.pinimg.com/736x/69/ea/52/69ea52970ed833c780467f46475850e2.jpg' },
+    { id: uuidv4(), name: 'Berry Smoothie', description: 'Mixed berries, banana, and yogurt smoothie.', course: 'Drink', price: 45, image: 'https://i.pinimg.com/1200x/79/b9/ef/79b9efb4ef01c1f218434cabe5bd5806.jpg' },
+    { id: uuidv4(), name: 'Matcha Latte', description: 'Japanese green tea chai latte with almond milk.', course: 'Drink', price: 40, image: 'https://i.pinimg.com/736x/52/2f/98/522f982f88048da147ed011efef16ac1.jpg' },
+    { id: uuidv4(), name: 'Fresh Lemonade', description: 'Sparkling homemade lemonade with mint leaves.', course: 'Drink', price: 30, image: 'https://i.pinimg.com/736x/75/8e/8f/758e8fcb501b48b5db38c6fb83f8c46d.jpg' },
   ]);
 
-  // NEW: Personal menu items state
+  // NEW: Deal items state
+  const [dealItems, setDealItems] = useState<DealItem[]>([]);
   const [personalMenuItems, setPersonalMenuItems] = useState<MenuItem[]>([]);
-  // State for editing items (Edit screen)
   const [editingItem, setEditingItem] = useState<MenuItem | null>(null);
-
-  const updateMenuItem = (id: string, updatedItem: Omit<MenuItem, 'id'>) => {
-    setMenuItems(prev => prev.map(item => (item.id === id ? { ...updatedItem, id } : item)));
-    Alert.alert('Updated', `${updatedItem.name} has been updated.`);
-    setEditingItem(null);
-    setScreen('Home');
-  };
-
   const [selectedCourseFilter, setSelectedCourseFilter] = useState<Course | 'All'>('All');
 
   // Derived values
@@ -1349,6 +1849,8 @@ export default function App() {
     });
     return avg;
   }, [menuItems]);
+
+  const activeDealsCount = dealItems.filter(deal => deal.isActive).length;
 
   // Actions
   const login = () => {
@@ -1378,13 +1880,23 @@ export default function App() {
     setMenuItems(prev => prev.filter(i => i.id !== id));
   };
 
-  // NEW: Add item to personal menu
+  const updateMenuItem = (id: string, updatedItem: Omit<MenuItem, 'id'>) => {
+    setMenuItems(prev => prev.map(item => (item.id === id ? { ...updatedItem, id } : item)));
+    Alert.alert('Updated', `${updatedItem.name} has been updated.`);
+    setEditingItem(null);
+    setScreen('Home');
+  };
+
+  // NEW: Update deals function
+  const updateDeals = (newDeals: DealItem[]) => {
+    setDealItems(newDeals);
+  };
+
   const addToPersonalMenu = (item: MenuItem) => {
     setPersonalMenuItems(prev => [...prev, { ...item, id: uid() }]);
     Alert.alert('Added', `${item.name} added to your personal menu!`);
   };
 
-  // NEW: Remove item from personal menu
   const removeFromPersonalMenu = (id: string) => {
     setPersonalMenuItems(prev => prev.filter(i => i.id !== id));
   };
@@ -1414,6 +1926,7 @@ export default function App() {
           currentFilter={selectedCourseFilter}
           isAdmin={isAdmin}
           onAddToPersonalMenu={addToPersonalMenu}
+          dealItemsCount={activeDealsCount}
         />
       )}
 
@@ -1435,8 +1948,26 @@ export default function App() {
       )}
 
       {screen === 'Contact' && <ContactScreen onBack={() => setScreen('Home')} />}
-      {screen === 'Deals' && <DealsScreen menuItems={menuItems} filter={selectedCourseFilter} onBack={() => setScreen('Home')} />}
-      {screen === 'Payment' && <PaymentScreen onBack={() => setScreen('Home')} onPaySuccess={() => { Alert.alert('Paid', 'Payment simulated.'); setScreen('Home'); }} />}
+
+      {screen === 'Deals' && (
+        <DealsScreen 
+          menuItems={menuItems} 
+          dealItems={dealItems}
+          filter={selectedCourseFilter} 
+          onBack={() => setScreen('Home')} 
+        />
+      )}
+
+      {screen === 'Payment' && (
+        <PaymentScreen 
+          onBack={() => setScreen('Home')} 
+          onPaySuccess={() => { 
+            Alert.alert('Paid', 'Payment simulated.'); 
+            setScreen('Home'); 
+          }} 
+        />
+      )}
+
       {screen === 'AddMenu' && <AddMenuScreen onAdd={addMenuItem} onCancel={() => setScreen('Home')} />}
 
       {screen === 'EditMenu' && editingItem && (
@@ -1489,6 +2020,30 @@ export default function App() {
         </View>
       )}
 
+      {screen === 'DealManagement' && isAdmin && (
+        <DealManagementScreen
+          menuItems={menuItems}
+          dealItems={dealItems}
+          onUpdateDeals={updateDeals}
+          onBack={() => setScreen('Home')}
+        />
+      )}
+
+      {screen === 'Manage' && isAdmin && (
+        <ManageScreen
+          menuItems={menuItems}
+          dealItems={dealItems}
+          onUpdateDeals={updateDeals}
+          onEditItem={(item) => {
+            setEditingItem(item);
+            setScreen('EditMenu');
+          }}
+          onRemoveItem={removeMenuItem}
+          onOpenScreen={setScreen}
+          onBack={() => setScreen('Home')}
+        />
+      )}
+
       {/* Bottom Navigation */}
       {screen !== 'Login' && (
         <View style={styles.bottomNav}>
@@ -1496,16 +2051,27 @@ export default function App() {
           <NavButton label="Search" onPress={() => setScreen('Search')} />
           <NavButton label="Contact" onPress={() => setScreen('Contact')} />
           <NavButton label="Deals" onPress={() => setScreen('Deals')} />
-          <NavButton label={isAdmin ? 'Change' : 'Personal'} onPress={() => setScreen(isAdmin ? 'Change' : 'Personal')} />
+          <NavButton 
+            label={isAdmin ? 'Manage' : 'Personal'} 
+            onPress={() => setScreen(isAdmin ? 'Manage' : 'Personal')} 
+          />
           <NavButton label="Logout" onPress={logout} />
         </View>
       )}
 
-      {/* Floating Action Button */}
-      {isAdmin && screen !== 'AddMenu' && screen !== 'Login' && (
-        <TouchableOpacity style={styles.fab} onPress={() => setScreen('AddMenu')}>
-          <Text style={{color:'#fff', fontWeight:'700'}}>+ Add</Text>
-        </TouchableOpacity>
+      {/* Floating Action Buttons */}
+      {isAdmin && screen !== 'AddMenu' && screen !== 'Login' && screen !== 'DealManagement' && screen !== 'Manage' && (
+        <View style={{ position: 'absolute', right: 20, bottom: 80 }}>
+          <TouchableOpacity 
+            style={[styles.fab, { marginBottom: 8 }]} 
+            onPress={() => setScreen('Manage')}
+          >
+            <Text style={{color:'#fff', fontWeight:'700', fontSize: 12}}>⚙️ Manage</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.fab} onPress={() => setScreen('AddMenu')}>
+            <Text style={{color:'#fff', fontWeight:'700'}}>+ Add</Text>
+          </TouchableOpacity>
+        </View>
       )}
     </SafeAreaView>
   );
